@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* HTML5+CSS3下拉菜单 */
+.case01{width:200px;}
+.case01 li{height:20px; line-height:20px;}
+.case01 li:nth-child(even){background:#CCC; color:red;}
+.case02{-webkit-column-count:3; -webkit-column-rule:1px solid #ccc; -webkit-column-gap:10px;-moz-column-count:3; -moz-column-rule:1px solid #ccc; -moz-column-gap:10px;}
+.case03{width:300px; height:150px; padding-top:50px; background:url(../images/demo.jpg) no-repeat;}
+.case03 div{width:200px; height:100px; margin:0 auto; background:rgba(255,255,0,0.5); color:rgba(0,0,0,0.3); font-size:30px; font-weight:bold; overflow:hidden;}
+.case04{height:20px; margin-bottom:20px; padding:10px 0; box-shadow:5px 2px 6px rgba(0,0,0,0.5); text-shadow:5px 5px 1px rgba(0,0,0,0.5); font-size:20px;}
+.case05 div{border:1px solid #ccc; height:50px;}
+.case05 .div01{background:-webkit-gradient(linear,0 0,0 100%,from(red),to(yellow));background:-moz-linear-gradient(top,red,yellow);}
+.case05 .div02{background:-webkit-gradient(linear,0 0,0 20%,from(red),to(yellow));background:-moz-linear-gradient(top,red,yellow 20%);}
+.case05 .div03{background:-webkit-gradient(linear,0 0,0 100%,from(red),to(green),color-stop(50%,yellow),color-stop(50%,yellow));background:-moz-linear-gradient(top,red,yellow 50%,green 100%);}
+.case06{height:230px;}
+.case06 article{display:inline-block; vertical-align:top; margin:10px 10px 0 10px;}
+.case06 .std-box{padding:10px; display:block; background:#fff; border-radius:10px; box-shadow:3px 3px 2px #d0d0d0; border:1px solid #eee;}
+.case06 .std-inner{width:180px; height:170px;overflow:hidden; position:relative;}
+.case06 .std-inner img{margin:-10px 0 0 -10px;}
+.case06 .std-box:hover{margin:-10px 0 0 -10px; border-radius:20px;}
+.case06 .std-box:hover .std-inner{width:200px; height:190px;}
+.case06 .std-box:hover .std-inner img{margin:0;}
+
+/* jquery下拉菜单 */
+.item01{width:300px;height:25px;padding:10px 0 0 10px;background:#666;}
+.item01 a{color:#fff;}
+.item01 li{width:75px;float:left;}
+.item01 li strong{height:22px;font-weight:normal;text-align:center;}
+.item01 .grade1{height:22px;}
+.item01 em,.item01 span,.item01 strong,.item01 a{display:block;}
+.item01 em a{width:75px;height:20px;line-height:20px;text-align:center;}
+.item01 em{position:relative;background:#666;}
+.item01 span{position:absolute;top:0;left:75px;}
+.grade2,.deep_grayBG{background:#666;}
+.grade3,.grayBG{background:#999;}
