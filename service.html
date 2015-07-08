@@ -8,11 +8,19 @@
 	<meta name="apple-touch-fullscreen" content="yes">
 	<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
 	<link type='text/css'  href="css/index.css" media="all" rel="stylesheet" />
-	<!--[if lt ie 9]>
-    <script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
+    <script src="js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
+<!--[if lte IE 9]>
+    <script>
+    $(function(){
+		var kd = KISSY.DOM;
+        var h = kd.viewportHeight();
+        if(h < 480){
+        	$(".c-txt").css('padding-top','10px');
+        }
+	});</script>
+<![endif]-->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
