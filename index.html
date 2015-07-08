@@ -1,312 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html leng="zh-CN">
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />如果安装了GCF，则使用GCF渲染页面，如果没有则使用最高版本的IE内核进行渲染-->
-    <title>钟丽君的创意简历-展示我的个人信息、教育经历、工作经历、工作能力、所学技能</title>
-    <meta name="description" content="HTML5 CSS3" />
-    <meta name="author" content="lijun_zhong" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/sample.css" />
-    <!--[if IE]>
-    <script src="http://a.tbcdn.cn/p/fp/2011a/html5.js"></script>
-    <![endif]-->
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+	<meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link type='text/css'  href="css/index.css" media="all" rel="stylesheet" />
 </head>
-
 <body>
-	<header id="w_hd">
-        <div class="hd_box">
-            <h1>个人简历</h1>
-            <h2>by lily</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+	            	<nav class="top-nav">
+	            		<a href="service.html" target="_self">专业服务</a>
+	            		<a href="about_us.html" target="_self">联系我们</a>
+	            	</nav>
+	            	<div class="c-logo">
+	            		<img src="img/index.png" alt="公众号助手">
+	            		<h2>公众平台手机端，微商运营微店必备</h2>
+	            	</div>
+	            	<a href="http://www.salesbang.cn/wechatDownload/WeixinHelper.apk" class="btn-download">免费下载</a>
+	            </div>
+	            <div class="swiper-slide bg">
+					<div class="c-txt">
+						<h3>粉丝消息</h3>
+						<strong>随时随地实时对话、自动回复</strong>
+					</div>
+					<img class="c_img" src="img/f_01.png" alt="粉丝消息">
+	            </div>
+	            <div class="swiper-slide bg">
+	            	<div class="c-txt">
+	            		<h3>运营宝典</h3>
+	            		<strong>思路讲解、工具解剖、案例分析、政策解读</strong>
+	            	</div>
+					<img class="c_img" src="img/f_02.png" alt="运营宝典">
+	            </div>
+	            <div class="swiper-slide bg">
+	            	<div class="c-txt">
+	            		<h3>公众号排行榜</h3>
+	            		<strong>与全国同类公众号PK，发现你的排名</strong>
+	            	</div>
+					<img class="c_img" src="img/f_03.png" alt="公众号排行榜">
+	            </div>
         </div>
-    </header>
-    <section id="w_aboutme">
-    	<div class="aboutme_box">
-            <figure>
-                <figcaption>关于我</figcaption>
-                <p>Web前端工程师，居住在繁华大都市广州。</p>
-                <p>专注前端技术，关注配色方案。</p>
-                <p>爱生活，爱工作。</p>
-            </figure>
-        </div>
-    </section>
-    <section id="w_bd">
-        <div class="bd_box clearfix">
-    	<aside id="intro">
-            <div class="rModBox">
-                <h4>个人信息</h4>
-                <ul>
-                    <li>姓名：钟丽君</li>                   
-                    <li>民族：汉</li>
-                    <li>性别：女</li>                   
-                    <li>出生年月：1985年6月</li>
-                    <li>Email：18924166017@163.com</li>
-                    <li>手机号码：18924166017</li>
-                    <li>工作年限：6年</li>     
-                    <li>当前居住地：广东市越秀区</li>
-                </ul>
-            </div>
-            <div class="rModBox experience">
-                <h4>工作经历</h4>
-                <ul>
-                    <li>时间：2011年9月到2013年6月</li>
-                    <li>雇主名称：唯品会（中国）有限公司</li> 
-                    <li>所属部门：技术中心</li>
-                    <li>职位：前端工程师</li>
-                    <li>工作描述：负责公司网站（包括特卖会/奢侈品/唯品团/购物袋/结算）XHTML/CSS重构;制定XHTML/CSS工作代码编写规范，拼图规范;网站的日常维护，包括与需求人员/开发人员沟通，需求更改，BUG修改的，活动专题制作</li>
-                </ul>
-                <ul>
-                    <li>时间：2008年11月到2011年6月</li>
-                    <li>雇主名称：太平洋网络有限公司</li>	
-                    <li>所属部门：前端开发部</li>
-                    <li>职位：高级网页制作</li>
-                    <li>工作描述：主要负责太平洋女性网的日常工作，包括与需求方的沟通协调，工作单的时间估计与按排，日常修改，专题制作，CMS维护及发布，每年的网站大改版等等的工作。</li>
-                </ul>
-                <ul>
-                    <li>时间：2007年10月到2008年9月</li>
-                    <li>雇主名称：广州前力科技有限公司 </li>
-                    <li>职位：网页美工</li>
-                    <li>工作描述：网页设计与制作</li>
-                </ul>
-                <ul>
-                    <li>时间：2007年5月到2007年9月</li>
-                    <li>雇主名称：广州光之旅咨询服务有限公司</li>
-                    <li>职位： 网页美工</li>
-                    <li>工作描述：网页设计与制作</li>
-                </ul>
-            </div>
-            <div class="rModBox">
-                <h4>作品</h4>
-                <ul>
-                    <li>唯品会：<em style="color:#F00;">www.vip.com</em></li>
-                    <li>太平洋女性网：<em style="color:#F00;">www.pclady.com.cn</em></li>
-                </ul>
-            </div>
-            <div class="rModBox">
-                <h4>最高学历</h4>
-                <ul>
-                    <li>时间：2004年9月到2007年7月</li>
-                    <li>学校：广东省科学技术职业学院</li>
-                    <li>专业：计算机-图形图像</li></li>
-                    <li>所获学历：大专</li>
-                </ul>
-            </div>
-        </aside>
-    	<section id="skill">
-            <article class="info">
-                <header><h3>相关技能</h3></header>
-                <div class="dBody">
-                    <ul>
-                        <li>深度掌握XHTML+CSS架构页面，有丰富的网站重构经验,对语义化、结构与内容分离等有深刻理解；</li>
-                        <li>熟悉不同浏览器之间的差异， 能编写出具有良好的兼容性和执行效率的代码；</li>
-                        <li>熟悉使用DreamWeaver及Sublime Text进行手写代码，对待代码态度严谨（完美主义），有良好编写习惯</li>
-                        <li>对HTML5/CSS3有一定的人了解与研究</li>
-                        <li>熟悉使用photoshop进行切图及拼图工作；</li>
-                        <li>了解WEB标准化、性能优化方法；</li>
-                        <li>对网站信息管理系统（CMS）有一定的了解与维护经验；</li>
-                        <li>熟练掌握javascript脚本语言，能根据需求实现各种效果；</li>
-                        <li>熟悉使用SVN版本控制系统</li>
-                        <li>具有良好的沟通能力，善于与需求人员/设计人员/开发人员协调沟通，崇尚团队合作</li>
-                    </ul>
-                </div>
-            </article>
-            <article class="newSkill">
-                <header><h3>CSS3 新技术展示</h3></header>
-<div class="dBody">
-<div>
-<strong class="sTit">一、隔行变色</strong>
-<ul class="case01">
-<li>幼齿熟女通杀！牛仔夹克是王道</li>
-<li>流苏包包潮 长穗仍高温不减！</li>
-<li>打底裤必杀技 萝卜腿变筷子腿</li>
-<li>3分活力 7分优雅 OL实用色彩搭</li>
-<li>开学预备 简洁3单品高调校园</li>
-</ul>
-<code>
-<pre>li:nth-child(even){background:#CCC; color:red;}</pre>
-</code>
-</div>
-<div>
-<strong class="sTit">二、分栏</strong>
-<div class="case02">
-A long cold winter delayed the blossoming of the millions of cherry, apricot, peach, and prune plum trees covering hundreds of square miles of the Valley floor. Then, unlike many years, the rains that followed were light and too early to knock the blossoms from their branches.
-</div>
-<code>
-<pre>.case02{
-/*for chrome*/
--webkit-column-count:3; 
--webkit-column-rule:1px solid #ccc; 
--webkit-column-gap:10px;
-/*for ff*/
--moz-column-count:3;
--moz-column-rule:1px solid #ccc;
--moz-column-gap:10px;}</pre>
-</code>
-</div>
-<div>
-<strong class="sTit">三、文字/背景 透明度</strong>
-<div class="case03">
-<div>
-流苏包包潮长穗仍高温不减
-</div>
-</div>
-<code>
-<pre>background:rgba(255,255,0,0.5)
-color:rgba(0,0,0,0.3)
-最后一个参数便是透明度的设置</pre>
-</code>
-</div>
-<div>
-<strong class="sTit">四、阴影</strong>
-<div class="case04">
-流苏包包潮长穗仍高温不减
-</div>
-<code>
-<pre>box-shadow:5px 2px 6px rgba(0,0,0,0.5);
-text-shadow:5px 5px 1px rgba(0,0,0,0.5);
-</pre>
-</code>
-</div>
-<div>
-<strong class="sTit">五、各式渐变</strong>
-<div class="case05">
-<div class="div01"></div>
-<code>
-<pre>background:-webkit-gradient(linear,0 0,0 100%,from(red),to(yellow));
-background:-moz-linear-gradient(top,red,yellow);
-</pre>
-</code>
-<div class="div02"></div>
-<code>
-<pre>background:-webkit-gradient(linear,0 0,0 <span>10%</span>,from(red),to(yellow));
-background:-moz-linear-gradient(top,red,yellow <span>10%</span>);
-标红处为指定渐变高度
-</pre>
-</code>
-<div class="div03"></div>
-</div>
-<code>
-<pre>background:-webkit-gradient(linear,0 0,0 <span>100%</span>,
-from(red),to(green), /*第一个色值 到 最后一个色值*/
-color-stop(50%,yellow),color-stop(50%,yellow)); /*中间色值*/
-webkit 内核相对复杂些
----------------------------------------------------------------
-background:-moz-linear-gradient(top,red,yellow 50%,green 100%);
-</pre>
-</code>
-</div>
-<div>
-<strong class="sTit">六、圆角</strong>
-<div class="case06">
-<article>
-<a href="#" class="std-box">
-<div class="std-inner">
-<img src="images/demo.jpg" />
-</div>
-</a>
-</article>
-<article>
-<a href="#" class="std-box">
-<div class="std-inner">
-<img src="images/demo.jpg" />
-</div>
-</a>
-</article>
-</div>
-<code>
-<pre>border-radius:10px;</pre>
-</code>
-</div>
-</div>
-            </article>
-            <article class="newSkill">
-                <header><h3>Javascript</h3></header>
-<div class="dBody">
-<div>
-<strong class="sTit">一、JQ实现3级下拉菜单</strong>
-<div class="item01">
-<ul>
-<li><strong>
-<a href="#" target="_blank" class="grade1">常用资料</a>
-<em>
-<a href="#" target="_blank" class="grade2">2 grade</a>
-<span>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-</span>
-</em>
-<em>
-<a href="#" target="_blank" class="grade2">2 grade</a>
-<span>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-</span>
-</em>
-<em><a href="#" target="_blank" class="grade2">2 grade</a></em>
-</strong>
-</li>
-<li>
-<strong>
-<a href="#" target="_blank" class="grade1">新手入门</a>
-<em>
-<a href="#" target="_blank" class="grade2">2 grade</a>
-<span>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-</span>
-</em>
-<em><a href="#" target="_blank" class="grade2">2 grade</a></em>
-<em><a href="#" target="_blank" class="grade2">2 grade</a></em>
-</strong>
-</li>
-<li>
-<strong>
-<a href="#" target="_blank" class="grade1">活动攻略</a>
-<em>
-<a href="#" target="_blank" class="grade2">2 grade</a>
-<span>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-<a href="#" target="_blank" class="grade3">3 grade</a>
-</span>
-</em>
-<em><a href="#" target="_blank" class="grade2">2 grade</a></em>
-<em><a href="#" target="_blank" class="grade2">2 grade</a></em>
-</strong>
-</li>
-</ul>
-</div>
-<code>
-<pre>$(".item01 em").hide();
-//二级菜单弹出
-$(".item01 strong").hover(
-function (){
-$(this).parent().find("em").show();
-$(this).parent().find("em").end().find("span").hide();
-},
-function (){
-$(this).parent().find("em").hide();
-}
-);
-//三级菜单弹出
-$(".item01 em").hover(
-function (){
-$(this).find("a.grade2").addClass("grayBG");
-$(this).find("span").show();
-},
-function (){
-$(this).find("a.grade2").removeClass("grayBG");
-$(this).find("span").hide();
-}
-);</pre>
-</code>
-</div>
-</div>
-            </article>
-        </section>
-        </div>
-    </section>
-    <footer id="w_fd"><div class="fd_box"><span>html5</span><span>css3</span><span>jquery</span></div></footer>
-<script src="js/jquery-1.3.2.js"></script>
-<script src="js/sample.js"></script>
+    </div>
+    <div class="swiper-button-next"></div>
+
+    <script src="js/swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        direction: 'vertical'
+    });
+    </script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html leng="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+	<meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link type='text/css'  href="css/index.css" media="all" rel="stylesheet" />
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<nav class="top-nav">
+            		<a href="index.html" target="_self">功能介绍</a>
+            		<a href="about_us.html" target="_self">联系我们</a>
+            	</nav>
+            	<div class="service-img">
+            		<img src="img/s_01.png" alt="公众号助手">
+            		<h2>我们不仅仅提供助手App，还提供<br>公众号专业服务！</h2>
+            	</div>
+            </div>
+            <div class="swiper-slide bg">
+				<div class="c-txt">
+					<h3>代理认证</h3>
+					<strong>加V认证，你就是官方！</strong>
+				</div>
+				<img class="c-img" src="img/s_02.png" alt="粉丝消息">
+            </div>
+            <div class="swiper-slide bg">
+            	<div class="c-txt">
+            		<h3>微商城搭建</h3>
+            		<strong>开启微商新时代！</strong>
+            	</div>
+				<img class="c-img" src="img/s_03.png" alt="运营宝典">
+            </div>
+            <div class="swiper-slide more-bg">
+            	<div class="c-txt">
+            		<h3>MORE…</h3>
+            		<strong>公众号WIFI开通、微信支付申请、专业咨询和培训</strong>
+            	</div>
+				<img class="c-img" src="img/more.png" alt="公众号排行榜">
+				<ul class="contact">
+					<li><span class="contact-tit">在线客服</span><span class="contact-info">QQ客服</span></li>
+					<li><span class="contact-tit">咨询电话</span><span class="contact-info">400-805-8802</span></li>
+				</ul>
+				<p class="corporation">©2015 广州市珍分夺秒信息科技有限公司<br>粤ICP备14052434号-1</p>
+            </div>
+        </div>
+    </div>
+	<div class="swiper-button-next"></div>
+
+
+    <script src="js/swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        direction: 'vertical'
+    });
+    </script>
+</body>
+</html>
