@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
 ul,li{list-style:none;}
 em,i{font-style:normal;}
 html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
-img{width: auto; max-width: 100%; height: auto; border: 0;}/*设置图片自适应*/
+img{width: auto; max-width: 100%; height: auto; border: 0; vertical-align: top;}/*设置图片自适应*/
 .video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
 body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#333;}/*设置页面字体*/
 
@@ -59,11 +59,13 @@ flex-direction: column;
 .service-img{margin: 60px 0;}
 .service-img h2{margin-top: 45px; font-size: 32px; color: #333;}
 .more-bg{background-color: #f1f1f1;}
+.more-bg-top{margin-bottom:10px; background-color: #fff; border: 1px;}
 .contact{border-top: 1px solid #e0e0e0; background-color: #fff;}
 .contact li{height: 85px; padding: 0 25px; border-bottom: 1px solid #e0e0e0; line-height: 85px;}
 .contact li a{height: 85px;display: block;}
 .contact-tit{float: left; color: #000; font-size: 32px;}
-.contact-info{float: right; color: #8a8a8a; padding-right: 25px; background: url(../img/arrow_m.png) no-repeat right 29px; cursor: pointer;}
+.contact-info{float: right; color: #8a8a8a; padding-right: 25px; background: url(../img/arrow_m.png) no-repeat right 27px; cursor: pointer;}
+.contact-info img{margin-top: 30px;}
 /*关于我们*/
 #about-us{background-color: #f1f1f1;}
 .about-wrap{width: 100%; height: 100%; margin: 0 auto; overflow: hidden; z-index: 1;}

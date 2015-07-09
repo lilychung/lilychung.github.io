@@ -43,15 +43,17 @@
 				<img class="c-img" src="img/s_03.png" alt="运营宝典">
             </div>
             <div class="swiper-slide more-bg">
-            	<div class="c-txt">
-            		<h3>MORE…</h3>
-            		<strong>公众号WIFI开通、微信支付申请、<br>专业咨询和培训</strong>
-            	</div>
-				<img class="c-img" src="img/more.png" alt="公众号排行榜">
+                <div class="more-bg-top">
+                	<div class="c-txt">
+                		<h3>MORE…</h3>
+                		<strong>公众号WIFI开通、微信支付申请、<br>专业咨询和培训</strong>
+                	</div>
+    				<img class="c-img" src="img/more.png" alt="公众号排行榜">
+                </div>
 				<ul class="contact">
-                    <li><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAyOTY5OF8yOTMzODlfNDAwODA1ODgwMl8yXw">
+                    <li id="j-online-qq">
                         <span class="contact-tit">在线客服</span>
-                        <span class="contact-info"><img src="img/icon_qq.png" alt=""></span></a>
+                        <span class="contact-info"><img src="img/icon_qq.png" alt="" width="92" height="22"></span>
                     </li>
                     <li><a href="tel:400-805-8802"><span class="contact-tit">咨询电话</span><span class="contact-info">400-805-8802</span></a></li>
                 </ul>
@@ -63,7 +65,9 @@
 
 
     <script src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
     <script>
+    BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq'});
     var swiper = new Swiper('.swiper-container', {
         nextButton: '.swiper-button-next',
         direction: 'vertical'
