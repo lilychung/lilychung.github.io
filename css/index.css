@@ -61,7 +61,7 @@ flex-direction: column;
 .more-bg{background-color: #f1f1f1;}
 .contact{border-top: 1px solid #e0e0e0; background-color: #fff;}
 .contact li{height: 85px; padding: 0 25px; border-bottom: 1px solid #e0e0e0; line-height: 85px;}
-.contact li a{height: 85px;display: block;}
+.contact li a{height: 85px;display: block; border: 1px solid red;}
 .contact-tit{float: left; color: #000; font-size: 32px;}
 .contact-info{float: right; color: #8a8a8a; padding-right: 25px; background: url(../img/arrow_m.png) no-repeat right 29px; cursor: pointer;}
 /*关于我们*/
