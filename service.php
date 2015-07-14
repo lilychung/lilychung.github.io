@@ -1,3 +1,8 @@
+<?php
+require_once('weixin.class.php');
+$weixin = new class_weixin();
+$signPackage = $weixin->GetSignPackage();
+?>
 <!DOCTYPE html>
 <html leng="zh-CN">
 <head>
@@ -67,6 +72,7 @@
 
     <script src="js/swiper.min.js"></script>
     <script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
     //QQ客服接口
     BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq'});
@@ -77,60 +83,81 @@
     });
 
     //微信分享自定标题图片
-    var imgUrl = "http://lilychung.github.io/img/logo.png";  //图片LOGO注意必须是绝对路径
-    var lineLink = "http://lilychung.github.io/";   //网站网址，必须是绝对路径
-    var descContent = '公众号助手，是微信公众平台手机端，直接管理微信公众账号，实现公众帐号运营者与粉丝之间的实时互动'; //分享给朋友或朋友圈时的文字简介
-    var shareTitle = '公众号助手-微信公众平台手机端';  //分享title
-    var appid = ''; //apiID，可留空
-
-    function shareFriend() {
-       WeixinJSBridge.invoke('sendAppMessage',{
-           "appid": appid,
-           "img_url": imgUrl,
-           "img_width": "180",
-           "img_height": "180",
-           "link": lineLink,
-           "desc": descContent,
-           "title": shareTitle
-       }, function(res) {
-           //_report('send_msg', res.err_msg);
-       })
-    }
-    function shareTimeline() {
-       WeixinJSBridge.invoke('shareTimeline',{
-           "img_url": imgUrl,
-           "img_width": "180",
-           "img_height": "180",
-           "link": lineLink,
-           "desc": descContent,
-           "title": shareTitle
-       }, function(res) {
-              //_report('timeline', res.err_msg);
-       });
-    }
-    function shareWeibo() {
-       WeixinJSBridge.invoke('shareWeibo',{
-           "content": descContent,
-           "url": lineLink,
-       }, function(res) {
-           //_report('weibo', res.err_msg);
-       });
-    }
-    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-       // 发送给好友
-       WeixinJSBridge.on('menu:share:appmessage', function(argv){
-           shareFriend();
-       });
-       // 分享到朋友圈
-       WeixinJSBridge.on('menu:share:timeline', function(argv){
-           shareTimeline();
-       });
-       // 分享到微博
-       WeixinJSBridge.on('menu:share:weibo', function(argv){
-           shareWeibo();
-       });
-    }, false);
+	wx.config({
+		debug: false,
+		appId: '<?php echo $signPackage["appId"];?>',
+		timestamp: <?php echo $signPackage["timestamp"];?>,
+		nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+		signature: '<?php echo $signPackage["signature"];?>',
+		jsApiList: [
+			// 所有要调用的 API 都要加到这个列表中
+			'checkJsApi',
+			'onMenuShareAppMessage',//分享朋友
+			'onMenuShareTimeline',//分享朋友圈
+			'onMenuShareQQ',//分享到qq
+			'onMenuShareWeibo',//分享到微博
+		  ]
+	});
+	wx.ready(function () {
+		// 在这里调用 API
+		var wxData = {
+			title:'公众号助手 - 微信公众平台手机端',
+			desc:'公众号助手，是微信公众平台手机端，直接管理微信公众账号，实现公众帐号运营者与粉丝之间的实时互动',
+			link: 'http://lilychung.github.io/',
+			imgUrl:'http://lilychung.github.io/img/logo.png'
+		}
+		
+		wx.checkJsApi({
+			jsApiList: [
+				'checkJsApi',
+				'onMenuShareAppMessage',
+				'onMenuShareTimeline',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+			],
+			success: function(res) {
+				//console.log(JSON.stringify(res));
+			}
+		});
+		wx.onMenuShareAppMessage({
+			title: wxData.title,
+			desc: wxData.desc,
+			link: wxData.link,
+			imgUrl: wxData.imgUrl,
+			success: function(res) {
+			},
+			fail: function(res) {
+				//console.log(JSON.stringify(res));
+			}
+		});
+		wx.onMenuShareTimeline({
+			title: wxData.title, 
+			link: wxData.link, 
+			imgUrl: wxData.imgUrl, 
+			success: function() {
+			}
+		});
+		wx.onMenuShareQQ({
+			title: wxData.title, 
+			desc: wxData.desc,
+			link: wxData.link, 
+			imgUrl: wxData.imgUrl, 
+			success: function() {
+			},
+			cancel: function() {
+			}
+		});
+		wx.onMenuShareWeibo({
+			title: wxData.title, 
+			desc: wxData.desc,
+			link: wxData.link,
+			imgUrl: wxData.imgUrl,
+			success: function() {
+			},
+			cancel: function() {
+			}
+		});
+	});
     </script>
 </body>
 </html>
