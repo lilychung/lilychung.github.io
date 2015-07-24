@@ -3,139 +3,128 @@
 <head>
 	<meta http-equiv="Content-Type" content="charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<title>公众号助手 - 微信公众平台手机端</title>
-  	<meta name="keywords" content="微信公众号,微信公众号助手,公众平台,微信公众平台登录,微信公众号注册,公众号申请,微信公众号认证,微信营销,微商城,微信公众平台手机端"/>
-  	<meta name="description" content="公众号助手，是微信公众平台手机端，直接管理微信公众账号，实现公众帐号运营者与粉丝之间的实时互动。同时也是国内最专业的微信公众号服务商，基于公众号为客户提供账号注册、开发、运营、推广一体化解决方案。"/>
-	<link type='text/css'  href="css/index.css" media="all" rel="stylesheet" />
+	<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
+	<meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-touch-fullscreen" content="yes">
 	<link href="img/favicon.ico" rel="shortcut icon">
-	<!--[if lt IE 9]>
-    <script>
-    (function() {
-	    // 页面头部
-	    var a = ['section', 'nav', 'header', 'footer'];
-	    for (var i = 0, j = a.length; i < j; i++) {
-	        document.createElement(a[i]);
-	    }
+	<title>公众号助手 - 一键诊断 - 诊断结果</title>
+	<script type="text/javascript">
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
 	})();
-    </script>
-    <![endif]-->
-    <script>
-	var browser={  
-		versions:function(){   
-			   var u = navigator.userAgent, app = navigator.appVersion;   
-			   return {//移动终端浏览器版本信息   
-					trident: u.indexOf('Trident') > -1, //IE内核  
-					presto: u.indexOf('Presto') > -1, //opera内核  
-					webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核  
-					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核  
-					mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端  
-					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  
-					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器  
-					iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器  
-					iPad: u.indexOf('iPad') > -1, //是否iPad    
-					webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部 
-				};  
-			 }(),  
-		 language:(navigator.browserLanguage || navigator.language).toLowerCase()  
-	}   
-	if(browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad){        
-		window.location = "http://m.zfdmkj.com/";      
-	} 
 	</script>
+<style type="text/css">
+/*重置reset css*/
+body,div,p,blockquote,
+ul,ol,dl,li,dt,dd,
+form,fieldset,legend,input,button,textarea,tr,td,th,
+h1,h2,h3,h4,h5,h5,hr
+{margin:0; padding:0;}
+article,nav,section,aside,header,footer,hgroup,figure,figcaption
+{margin:0; padding:0; display:block;}/*HTML5 TAG*/
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
+img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
+.video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
+body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
+.clearfix{zoom:1;}
+.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
+
+/*页面公用样式*/
+html,body{width:100%; height:100%; background: #efeff4;}
+a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
+
+.company-seal,.art-arrow{background-image: url(img/icons.png); background-repeat: no-repeat;}
+.art-arrow{width: 20px; height: 30px; background-position: 0 0; position: absolute; top: 50%; right: 20px; margin-top: -15px;}
+
+.result{margin-top:30px; background: url(img/bg-rep.png) repeat; position: relative; font-size: 28px;}
+.detection-tit{padding:20px 0; text-align: center; border-bottom: 1px solid #8a8789; font-size: 32px; }
+.detection-info li{padding:20px; border-bottom: 1px solid #8a8789;}
+.detection-opt td{padding:10px 0;}
+.detection-item{width: 150px; color: #666; vertical-align: top;}
+.detection-sign{padding:20px 20px 20px 0; text-align: right; color: #666;}
+.company-seal{width: 190px; height: 190px; background-position: -50px 0; position: absolute; bottom: 20px; right: 30px;}
+
+.topic{padding-top:30px;}
+.topic-tit{height:18px; padding: 18px 20px 0 20px; position: relative;}
+.topic-tit hr{height:1px; color: #e0e0e0; border:0; border-top: 1px solid #e0e0e0;}
+.topic-tit span{padding: 0 10px; background-color: #efeff4; position: absolute; top: 0; left: 50%; margin-left: -50px; color: #8a8a8a;}
+.topic-art{height: 80px; padding:20px; margin-top:20px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; overflow: hidden;}
+.topic-art a{height: 100%; display: block;}
+.art-pic{float: left;}
+.art-pic img{width: 80px; height: 80px;}
+.art-info{padding-left: 20px; float: left;}
+.art-tit{font-size: 28px;}
+.art-des{color: #8a8a8a;}
+
+.contact-us{height: 42px; padding:20px; margin-top:30px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; cursor: pointer;}
+</style>
 </head>
+
 <body>
-	<section class="w-header">
-		<header>
-			<div class="logo fl"><a href="index.html" target="_self" class="a-logo">公众号助手</a></div>
-			<ul class="nav fr">
-				<li class="active-color">首页</li>
-				<li><a href="service.html" target="_self">专业服务</a></li>
-				<li><a href="about_us.html" target="_self">关于我们</a></li>
+	<div class="wrap">
+		<div class="result">
+			<h2 class="detection-tit">诊断证明</h2>
+			<ul class="detection-info">
+				<li>
+					<table>
+						<tr class="detection-opt">
+							<td class="detection-item">公&nbsp;&nbsp;众&nbsp;&nbsp;号：</td>
+							<td>天翼港澳通</td>
+						</tr>
+						<tr class="detection-opt">
+							<td class="detection-item">项&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td>
+							<td>微信号</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr class="detection-opt">
+							<td class="detection-item">诊断结果：</td>
+							<td>未设置微信号，不利于粉丝搜索关注您的公众号哦！</td>
+						</tr>
+						<tr class="detection-opt">
+							<td class="detection-item">处理建议：</td>
+							<td>建议使用电脑登录公众平台设置微信号（ http://mp.weixin.qq.com）</td>
+						</tr>
+					</table>
+				</li>
 			</ul>
-		</header>
-	</section>
-	<section class="w-banner">
-		<div class="w-bd">
-			<div class="download fr">
-				<h1>公众平台手机端<br>微商运营微店必备</h1>
-				<dl class="download-area">
-					<dt class="fl"><img src="img/qr_code.png" alt="公众平台二维码" class="qr-code"></dt>
-					<dd class="fr">
-						<a href="https://itunes.apple.com/cn/app/gong-zhong-zhang-hao-zhu-shou/id793136360?mt=8" class="btn-download ios active-color" target="_blank">iphone下载</a>
-						<a href="http://www.salesbang.cn/wechatDownload/WeixinHelper.apk" class="btn-download active-color">Android下载</a>
+			<div class="detection-sign">
+				<p>诊断医师：Chow</p>
+				<p>日期：7/14</p>
+			</div>
+			<div class="company-seal"></div>
+		</div>
+		<div class="topic">
+			<div class="topic-tit">
+				<hr>
+				<span>推荐阅读</span>
+			</div>
+			<dl class="topic-art">
+				<a href="">
+					<dt class="art-pic">
+						<img src="img/logo.png" alt="微信号设置技巧">
+					</dt>
+					<dd class="art-info">
+						<p class="art-tit">微信号设置技巧</p>
+						<p class="art-des">不懂如何设置微信号？点击这里</p>					
 					</dd>
-				</dl>
-			</div>
+					<span class="art-arrow"></span>
+				</a>
+			</dl>
 		</div>
-	</section>
-	<section class="wrap">
-		<dl class="mod-txt">
-			<dt>粉丝消息</dt>
-			<dd>实时对话、自动回复，随时随地</dd>
-		</dl>
-		<ul class="mod-pic">
-			<li><img src="img/pic01.png" alt="实时对话"></li>
-			<li class="spe"><img src="img/pic02.png" alt="自动回复"></li>
-			<li><img src="img/pic03.png" alt="随时随地"></li>
-		</ul>
-	</section>
-	<section class="wrap">
-		<dl class="mod-txt">
-			<dt>运营宝典</dt>
-			<dd>思路讲解、工具解剖、案例分析、政策解读</dd>
-		</dl>
-		<ul class="mod-pic">
-			<li><img src="img/pic04.png" alt="运营宝典"></li>
-			<li class="spe"><img src="img/pic05.png" alt="新手教程"></li>
-			<li><img src="img/pic06.png" alt="文章"></li>
-		</ul>
-	</section>
-	<section class="wrap">
-		<dl class="mod-txt">
-			<dt>公众号排行榜</dt>
-			<dd>与全国同类公众号PK，发现你的排名</dd>
-		</dl>
-		<ul class="mod-pic">
-			<li><img src="img/pic07.png" alt="运营能力榜"></li>
-			<li class="spe"><img src="img/pic08.png" alt="实时排名"></li>
-			<li><img src="img/pic09.png" alt="公众号详情"></li>
-		</ul>
-	</section>
-	<section class="wrap">
-		<dl class="mod-txt">
-			<dt>交流社区</dt>
-			<dd>互相推广、互相加粉、经验交流与共享</dd>
-		</dl>
-		<ul class="mod-pic">
-			<li><img src="img/pic10.png" alt="社区"></li>
-			<li class="spe"><img src="img/pic11.png" alt="日常运功"></li>
-			<li><img src="img/pic12.png" alt="新手教程"></li>
-		</ul>
-	</section>
-	<footer>
-		<div class="site-info">
-			<div class="site-links fl">
-				<p class="notice-links">
-					<a href="service.html" target="_self">专业服务</a>
-					<a href="about_us.html" target="_self">关于我们</a>
-				</p>
-				<p class="friend-links">友情链接：
-					<a href="http://xiumi.us/" target="_blank">秀米</a>
-					<a href="http://www.25pp.com/" target="_blank">PP助手</a>
-					<a href="http://www.tongbu.com/" target="_blank">苹果助手</a>
-					<a href="http://www.kuaiyong.com/" target="_blank">快用苹果助手</a>
-				</p>
-			</div>
-			<div class="site-contact fr">
-				<span class="contact-online">在线客服：<img id="j-online-qq" src="img/icon_qq.png" alt="QQ交谈" class="cursor"></span>
-				<span class="contact-tel">400-805-8802</span>
-			</div>
-		</div>
-		<p class="corporation">©2015 广州市珍分夺秒信息科技有限公司     粤ICP备14052434号-1</p>
-	</footer>
-	<script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
-    <script>
-    BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq'});
-    </script>
+		<div class="contact-us">不会设置？联系我们<span class="art-arrow"></span></div>
+	</div>
 </body>
 </html>
