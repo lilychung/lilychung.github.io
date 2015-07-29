@@ -1,130 +1,37 @@
 <!DOCTYPE html>
-<html leng="zh-CN">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=device-width, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
-	<meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-	<meta name="apple-touch-fullscreen" content="yes">
-	<link href="img/favicon.ico" rel="shortcut icon">
-	<title>公众号助手 - 一键诊断 - 诊断结果</title>
-	<script type="text/javascript">
-	//百度统计
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
-<style type="text/css">
-/*重置reset css*/
-body,div,p,blockquote,
-ul,ol,dl,li,dt,dd,
-form,fieldset,legend,input,button,textarea,tr,td,th,
-h1,h2,h3,h4,h5,h5,hr
-{margin:0; padding:0;}
-article,nav,section,aside,header,footer,hgroup,figure,figcaption
-{margin:0; padding:0; display:block;}/*HTML5 TAG*/
-h1,h2,h3,h4,h5,h6{font-size:100%;}
-h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
-ul,li{list-style:none;}
-em,i{font-style:normal;}
-html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
-img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
-.video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
-.clearfix{zoom:1;}
-.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
+	<title></title>
+	<style>
+	/* html,body{width:100%; height: 100%; overflow-y:hidden;} */
+	.wrap{height: 3000px; background: url(text.png) repeat;}
+	.w-mask{width:100%; height:100%; background-color: #000; opacity: 0.8; position: fixed; top: 0; left: 0;}
+	.w-box{width: 200px; height: 200px; background-color: #fff; position: fixed; top: 50%; left: 50%; overflow: scroll;}
 
-/*页面公用样式*/
-html,body{width:100%; height:100%; background: #efeff4;}
-a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
-
-.company-seal,.art-arrow{background-image: url(img/icons.png); background-repeat: no-repeat;}
-.art-arrow{width: 20px; height: 30px; background-position: 0 0; position: absolute; top: 50%; right: 20px; margin-top: -15px;}
-
-.result{margin-top:30px; background: url(img/bg-rep.png) repeat; position: relative; font-size: 28px;}
-.detection-tit{padding:20px 0; text-align: center; border-bottom: 1px solid #8a8789; font-size: 32px; }
-.detection-info li{padding:20px; border-bottom: 1px solid #8a8789;}
-.detection-opt td{padding:10px 0;}
-.detection-item{width: 150px; color: #666; vertical-align: top;}
-.detection-sign{padding:20px 20px 20px 0; text-align: right; color: #666;}
-.company-seal{width: 190px; height: 190px; background-position: -50px 0; position: absolute; bottom: 20px; right: 30px;}
-
-.topic{padding-top:30px;}
-.topic-tit{height:18px; padding: 18px 20px 0 20px; position: relative;}
-.topic-tit hr{height:1px; color: #e0e0e0; border:0; border-top: 1px solid #e0e0e0;}
-.topic-tit span{padding: 0 10px; background-color: #efeff4; position: absolute; top: 0; left: 50%; margin-left: -50px; color: #8a8a8a;}
-.topic-art{height: 80px; padding:20px; margin-top:20px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; overflow: hidden;}
-.topic-art a{height: 100%; display: block;}
-.art-pic{float: left;}
-.art-pic img{width: 80px; height: 80px;}
-.art-info{padding-left: 20px; float: left;}
-.art-tit{font-size: 28px;}
-.art-des{color: #8a8a8a;}
-
-.contact-us{height: 42px; padding:20px; margin-top:30px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; cursor: pointer;}
-</style>
+	</style>
 </head>
-
 <body>
-	<div class="wrap">
-		<div class="result">
-			<h2 class="detection-tit">诊断证明</h2>
-			<ul class="detection-info">
-				<li>
-					<table>
-						<tr class="detection-opt">
-							<td class="detection-item">公&nbsp;&nbsp;众&nbsp;&nbsp;号：</td>
-							<td>天翼港澳通</td>
-						</tr>
-						<tr class="detection-opt">
-							<td class="detection-item">项&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td>
-							<td>微信号</td>
-						</tr>
-					</table>
-				</li>
-				<li>
-					<table>
-						<tr class="detection-opt">
-							<td class="detection-item">诊断结果：</td>
-							<td>未设置微信号，不利于粉丝搜索关注您的公众号哦！</td>
-						</tr>
-						<tr class="detection-opt">
-							<td class="detection-item">处理建议：</td>
-							<td>建议使用电脑登录公众平台设置微信号（ http://mp.weixin.qq.com）</td>
-						</tr>
-					</table>
-				</li>
-			</ul>
-			<div class="detection-sign">
-				<p>诊断医师：Chow</p>
-				<p>日期：7/14</p>
-			</div>
-			<div class="company-seal"></div>
-		</div>
-		<div class="topic">
-			<div class="topic-tit">
-				<hr>
-				<span>推荐阅读</span>
-			</div>
-			<dl class="topic-art">
-				<a href="">
-					<dt class="art-pic">
-						<img src="img/logo.png" alt="微信号设置技巧">
-					</dt>
-					<dd class="art-info">
-						<p class="art-tit">微信号设置技巧</p>
-						<p class="art-des">不懂如何设置微信号？点击这里</p>					
-					</dd>
-					<span class="art-arrow"></span>
-				</a>
-			</dl>
-		</div>
-		<div class="contact-us">不会设置？联系我们<span class="art-arrow"></span></div>
-	</div>
+	<div class="wrap">fsd</div>
+	<div class="w-mask" style="display:block;"></div>
+	<div class="w-box"> 还在使用 Grunt 0.3 版本吗？请查看 Grunt 0.3 注意事项
+
+在继续学习前，你需要先将Grunt命令行（CLI）安装到全局环境中。安装时可能需要使用sudo（针对OSX、*nix、BSD等系统中）权限或者作为管理员（对于Windows环境）来执行以下命令。
+
+npm install -g grunt-cli
+
+上述命令执行完后，grunt 命令就被加入到你的系统路径中了，以后就可以在任何目录下执行此命令了。
+
+注意，安装grunt-cli并不等于安装了 Grunt！Grunt CLI的任务很简单：调用与Gruntfile在同一目录中 Grunt。这样带来的好处是，允许你在同一个系统上同时安装多个版本的 Grunt。
+
+这样就能让多个版本的 Grunt 同时安装在同一台机器上。</div>
+
 </body>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script>
+	$(window).scroll(function(){
+		if($(".w-mask").css("display")!="none"){
+				$(window).scrollTop(0);
+		}
+	});
+</script>
 </html>
