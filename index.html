@@ -3,11 +3,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=device-width,user-scalable=no,target-densitydpi=device-dpi">
+	<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
 	<meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
 	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
 	<meta name="apple-touch-fullscreen" content="yes">
-	<link href="img/favicon.ico" rel="shortcut icon">
 	<title>公众号助手 - 排行详情</title>
 <style type="text/css">
 @charset "utf-8";
@@ -26,7 +25,7 @@ em,i{font-style:normal;}
 html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
 img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
 .video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
+body{font:28px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
 .clearfix{zoom:1;}
 .clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
 
@@ -34,17 +33,19 @@ body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\
 html,body{max-width: 640px; height:100%; margin:0 auto; background: #fff;}
 a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 /*排行详情*/
-.wrap{background: blue url(images/bg.png) no-repeat; height: 1000px;}
-
-@media screen and (max-width: 460px){/*当浏览器宽度小于460*/
-
-}
+.wrap{height:100%; background: url(images/bg.png) no-repeat; text-align: center;}
+.rank_title{padding-top: 70px; color: #fff;}
+.rank_num{width: 200px; margin: 150px auto 140px; font-size: 100px; color: #a77a03;}
+.rank_des{margin-bottom: 50px;}
 </style>
 </head>
 
 <body>
 	<div class="wrap">
-		
+		<div class="rank_title">ANMY在全国公众号的排名</div>
+		<h2 class="rank_num">100</h2>
+		<h3 class="rank_des">击败了78%的微信公众号，再牛逼的公众号也是<br>点滴粉丝的积累…扫描查看他的精彩文章：</h3>
+		<div class="qr_code"><img src="images/qr_code.png" alt=""></div>
 	</div>
 </body>
 </html>
