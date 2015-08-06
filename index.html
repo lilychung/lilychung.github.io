@@ -11,7 +11,7 @@
     <!-- Demo styles -->
 <style>
 *{padding: 0; margin: 0;}
-html, body {position: relative;height: 100%; font-size:12px;}
+html, body {position: relative;height: 100%;}
 body {background: #fff;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color:#000;margin: 0;padding: 0;}
 
 .swiper-container {width: 50%;height: 50%;margin: 0 auto;position: relative;overflow: hidden;z-index: 1; border:1px solid red;}
@@ -26,18 +26,20 @@ body {background: #fff;font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 
 .swiper-scrollbar2 {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
 .swiper-container-vertical > .swiper-scrollbar2 {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
+
+li{font-size: 32px; height: 50px; line-height: 50px;}
 </style>
 </head>
 <body>
-<div class="mashDiv"></div>
+<p class="j_a">aaaaaaaaa</p>
+<p class="j_b">bbbbbbbbb</p>
+<p class="j_c">ccccccccc</p>
 
-<input class="select testFiled" type="text" id="province" value="{{$provinceName}}" placeholder="省份" readonly readvalue="{{$provinceId}}"/>
-						<input class="word" type="hidden" name="province" id="p" value="{{$provinceId}}">
-		
-
-<div class="swiper-container selectBox province" style="visibility:hidden;">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
+    <!-- Swiper -->
+    <div class="swiper-container province" style="visibility:hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+<div class="selectBox">
 <ul class="selectUl">
 <li class="item"><span class="text">北京市</span><span class="value">1</span></li>
 <li class="item"><span class="text">天津市</span><span class="value">2</span></li>
@@ -75,38 +77,142 @@ body {background: #fff;font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 <li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
 </ul>
 </div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container city" style="visibility:hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+<div class="selectBox">
+<ul class="selectUl">
+<li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
+<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
+<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
+<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
+<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
+<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
+<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
+<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
+<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
+<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
+<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
+<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
+<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
+<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
+<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
+<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
+<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
+<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
+<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
+<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
+<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
+<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
+<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
+<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
+<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
+<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
+<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
+<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
+<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
+<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
+<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
+<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
+<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
+</ul>
 </div>
-<!-- Add Scroll Bar -->
-<div class="swiper-scrollbar"></div>
-</div>   
- 
- 
-		
-<script type="text/javascript" src="swiper.min.js"></script>
-<script>
-//判断是否是在微信环境下
-/*
-function isWeiXin(){
-	var ua = window.navigator.userAgent.toLowerCase();
-	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
-		return true;
-	}else{
-		return false;
-	}
-}
-*/
-var swiper = new Swiper('.province', {
-	scrollbar: '.swiper-scrollbar',
-	direction: 'vertical',
-	slidesPerView: 'auto',
-	mousewheelControl: true,
-	freeMode: true
-});
-//
-$("#province").focus(function(){
-	$('.mashDiv').show();
-	$(".province").css('visibility','visible');
-});
-</script>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar1"></div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container country" style="visibility:hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+<div class="selectBox">
+<ul class="selectUl">
+<li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
+<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
+<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
+<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
+<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
+<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
+<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
+<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
+<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
+<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
+<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
+<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
+<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
+<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
+<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
+<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
+<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
+<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
+<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
+<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
+<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
+<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
+<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
+<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
+<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
+<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
+<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
+<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
+<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
+<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
+<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
+<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
+<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
+</ul>
+</div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar2"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.province', {
+        scrollbar: '.swiper-scrollbar',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    });
+	var swiper1 = new Swiper('.city', {
+        scrollbar: '.swiper-scrollbar1',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    });
+	var swiper2 = new Swiper('.country', {
+        scrollbar: '.swiper-scrollbar2',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    });
+	//
+	$('.j_a').click(function(){
+		$('.province').css('visibility','visible');	
+	});
+	$('.j_b').click(function(){
+		$('.city').css('visibility','visible');	
+	});
+	$('.j_c').click(function(){
+		$('.country').css('visibility','visible');	
+	});
+    </script>
 </body>
 </html>
