@@ -1,51 +1,212 @@
 <!DOCTYPE html>
-<html leng="zh-CN">
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
-	<meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-	<meta name="apple-touch-fullscreen" content="yes">
-	<title>公众号助手 - 排行详情</title>
-<style type="text/css">
-@charset "utf-8";
-/*重置reset css*/
-body,div,p,blockquote,
-ul,ol,dl,li,dt,dd,
-form,fieldset,legend,input,button,textarea,tr,td,th,
-h1,h2,h3,h4,h5,h5,hr
-{margin:0; padding:0;}
-article,nav,section,aside,header,footer,hgroup,figure,figcaption
-{margin:0; padding:0; display:block;}/*HTML5 TAG*/
-h1,h2,h3,h4,h5,h6{font-size:100%;}
-h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
-ul,li{list-style:none;}
-em,i{font-style:normal;}
-html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
-img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
-.video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:28px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
-.clearfix{zoom:1;}
-.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <!--<link rel="stylesheet" href="swiper.css">-->
 
-/*页面公用样式*/
-html,body{max-width: 640px; height:100%; margin:0 auto; background: #fff;}
-a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
-/*排行详情*/
-.wrap{height:100%; background: url(images/bg.png) no-repeat; text-align: center;}
-.rank_title{padding-top: 70px; color: #fff;}
-.rank_num{width: 200px; margin: 150px auto 140px; font-size: 100px; color: #a77a03;}
-.rank_des{margin-bottom: 50px;}
+    <!-- Demo styles -->
+<style>
+*{padding: 0; margin: 0;}
+html, body {position: relative;height: 100%;}
+body {background: #fff;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color:#000;margin: 0;padding: 0;}
+
+.swiper-container {width: 50%;height: 50%;margin: 0 auto;position: relative;overflow: hidden;z-index: 1; border:1px solid red;}
+.swiper-slide {font-size: 18px;height: auto;-webkit-box-sizing: border-box;box-sizing: border-box;}
+/* Scrollbar */
+.swiper-scrollbar {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
+.swiper-container-vertical > .swiper-scrollbar {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
+.swiper-scrollbar-drag {height: 100%;width: 100%;background: rgba(0, 0, 0, 0.5);border-radius: 10px;position: relative;left: 0;top: 0;}
+
+.swiper-scrollbar1 {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
+.swiper-container-vertical > .swiper-scrollbar1 {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
+
+.swiper-scrollbar2 {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
+.swiper-container-vertical > .swiper-scrollbar2 {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
+
+li{font-size: 32px; height: 50px; line-height: 50px;}
 </style>
 </head>
-
 <body>
-	<div class="wrap">
-		<div class="rank_title">ANMY在全国公众号的排名</div>
-		<h2 class="rank_num">100</h2>
-		<h3 class="rank_des">击败了78%的微信公众号，再牛逼的公众号也是<br>点滴粉丝的积累…扫描查看他的精彩文章：</h3>
-		<div class="qr_code"><img src="images/qr_code.png" alt=""></div>
-	</div>
+<p class="j_a">aaaaaaaaa</p>
+<p class="j_b">bbbbbbbbb</p>
+<p class="j_c">ccccccccc</p>
+
+    <!-- Swiper -->
+    <div class="swiper-container province" style="visibility:hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+<div class="selectBox">
+<ul class="selectUl">
+<li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
+<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
+<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
+<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
+<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
+<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
+<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
+<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
+<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
+<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
+<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
+<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
+<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
+<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
+<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
+<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
+<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
+<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
+<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
+<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
+<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
+<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
+<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
+<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
+<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
+<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
+<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
+<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
+<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
+<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
+<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
+<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
+<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
+</ul>
+</div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container city" style="visibility:hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+<div class="selectBox">
+<ul class="selectUl">
+<li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
+<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
+<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
+<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
+<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
+<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
+<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
+<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
+<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
+<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
+<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
+<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
+<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
+<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
+<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
+<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
+<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
+<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
+<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
+<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
+<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
+<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
+<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
+<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
+<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
+<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
+<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
+<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
+<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
+<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
+<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
+<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
+<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
+</ul>
+</div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar1"></div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container country" style="visibility:hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+<div class="selectBox">
+<ul class="selectUl">
+<li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
+<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
+<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
+<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
+<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
+<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
+<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
+<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
+<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
+<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
+<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
+<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
+<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
+<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
+<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
+<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
+<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
+<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
+<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
+<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
+<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
+<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
+<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
+<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
+<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
+<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
+<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
+<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
+<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
+<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
+<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
+<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
+<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
+</ul>
+</div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar2"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.province', {
+        scrollbar: '.swiper-scrollbar',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    });
+	var swiper1 = new Swiper('.city', {
+        scrollbar: '.swiper-scrollbar1',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    });
+	var swiper2 = new Swiper('.country', {
+        scrollbar: '.swiper-scrollbar2',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    });
+	//
+	$('.j_a').click(function(){
+		$('.province').css('visibility','visible');	
+	});
+    </script>
 </body>
 </html>
