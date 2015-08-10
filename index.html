@@ -169,21 +169,73 @@ html, body {position: relative;height: 100%;}
 
 <div class="mashDiv"></div>
 
-
+<div class="select2">
+<div class="select1">
+<input class="select testFiled" type="text" id="province" value="{{$provinceName}}" placeholder="省份" readonly readvalue="{{$provinceId}}"/>
+<input class="word" type="hidden" name="province" id="p" value="{{$provinceId}}">
+</div>
+</div>
+                
+                
+                
 <div class="select2">
 <div class="select1">
 <input class="select testFiled" type="text" id="city" value="{{$cityName}}" placeholder="城市" readonly readvalue="{{$cityId}}"/>
 <input class="word" type="hidden" name="city" id="c" value="{{$cityId}}">
 </div>
 </div>
-                
-                
+
+
+<div class="swiper-container province" style="visibility:hidden;">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<ul class="selectUl">
+            <li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+			<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
+			<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
+			<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
+			<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
+			<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
+			<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
+			<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
+			<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
+			<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
+			<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
+			<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
+			<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
+			<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
+			<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
+			<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
+			<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
+			<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
+			<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
+			<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
+			<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
+			<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
+			<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
+			<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
+			<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
+			<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
+			<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
+			<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
+			<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
+			<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
+			<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
+			<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
+			<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
+			<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
+	</ul>
+</div>
+</div>
+<div class="swiper-scrollbar"></div>
+</div>
+              
                 
 <div class="swiper-container city" style="visibility:hidden;">
 <div class="swiper-wrapper">
 <div class="swiper-slide">
 <ul class="selectUl cityItem" >
-<li class="item"><span class="text">北京市</span><span class="value">1</span></li>
+            <li class="item"><span class="text">北京市</span><span class="value">1</span></li>
 			<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
 			<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
 			<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
@@ -226,9 +278,21 @@ html, body {position: relative;height: 100%;}
 
 <script type="text/javascript" src="http://js.zfdmkj.com/template_1/js/www/2015/swiper.min.js"></script>
 <script>
+$("#province").focus(function(){
+	$('.mashDiv').show();
+	$(".province").css('visibility','visible');
+});
 $("#city").focus(function(){
 	$('.mashDiv').show();
 	$(".city").css('visibility','visible');
+});
+
+var swiper = new Swiper('.province', {
+	scrollbar: '.swiper-scrollbar',
+	direction: 'vertical',
+	slidesPerView: 'auto',
+	mousewheelControl: true,
+	freeMode: true
 });
 
 var swiper1 = new Swiper('.city', {
