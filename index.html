@@ -1,307 +1,96 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, user-scalable=no">
-	
-	<title>订单详情</title>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="诊断详情"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<title>诊断详情</title>
+    <link type="text/css" href="{{$cssUrlPath}}template_1/styles/mobile/wechat/detection/detectionResult.css" rel="stylesheet">
+	<script type="text/javascript">
+	//百度统计
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
 </head>
 
-
-
-
-<script src="http://js.zfdmkj.com/template_1/js/mobile/wsy/jquery-1.11.1.min.js"></script>
-
-<style>
-/*临时*/
-/*临时结束*/
-
-
-.winMask {
-    background: none repeat scroll 0 0 rgba(0,0,0,0.4);
-    display:none;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    width:640px;
-    z-index: 1000;
-}
-
-.winMask .winBox {
-	 background: none repeat scroll 0 0 #f0f0f0;
-    border-radius: 10px;
-    height:193px;
-    left: 50%;
-    margin-left: -272px;
-    margin-top: -92px;
-    padding:0;
-    position: absolute;
-    top: 50%;
-    width:544px;
-} 
-
-.win_info {
-	width:100%;
-	height:32px;
-	line-height:32px;
-	padding:32px 0;
-	font-size:32px;
-	text-align:center;
-	color:#333;
-	border-bottom:1px solid #d5d5d5;
-	font-family:'黑体';
-}
-
-.winBtn {
-	width:100%;
-	height:32px;
-	line-height:32px;
-	padding:32px 0;
-	font-size:32px;
-	text-align:center;
-	color:#18b4ed;
-	cursor:pointer;
-	font-family:'黑体';
-}
-</style>
-<body >
-<style>
-@CHARSET "UTF-8";
-
-/*html,body{width:100%; height:100%; overflow-y:hidden;}*/
-
-.wrap { background:#FBFBFB; }
-
-.info { border-bottom:1px solid #EBEBEB; margin-bottom:32px; background:#fff; }
-
-.orderForm { width:600px; padding:0 20px; margin:0; margin-top:32px; background:#fff; border-top:1px solid #EBEBEB; }
-.orderForm .item { height:90px; line-height:90px; margin:0; border-bottom:1px solid #EBEBEB; list-style-type:none; }
-.orderForm .item .title, .orderForm .item .content { display:inline-block; height:85px; color:#c9c8cd; }
-.orderForm .item .title { float:left;  width:140px; color:#666;  }
-.orderForm .item .content { width:460px; text-align:left;}
-.orderForm .item .filed { width:440px;height:85px; line-height:28px; border:0; padding-left:0; font-size:28px; color:#666; }
-.orderForm .item .select { min-width:100px;max-width:113px; height:32px; border:0; margin:0; color:#333; font-size:28px; }
-/*
-.orderForm .item .select { min-width:100px;max-width:128px; height:32px; border:0; margin:0; color:#333; font-size:28px; }
-*/
-.select2, .select1 { display:inline-block; }
-
-.select2 { float:left; min-width:117px;max-width:208px; height:32px; line-height:32px; margin-top:27px;  margin-right:20px;padding:0px; /*background:url(template_1/images/mobile/wsy/downAngel.png) no-repeat 95px 13px; */}
-
-
-.select1 {height:32px; line-height:32px; overflow:hidden; }
-
-.orderBox { width:640px; padding:0; padding-bottom:20px; background:#fff; }
-.orderBox .send { display:block;  width:600px; height:90px; margin:20px auto; margin-top:120px; font-size:36px;color:#fff; background:#17B3ED; border:0; border-radius:10px; }
-.orderBox .disable { background:#93D5E8; }
-
-/*.selectBox .header {display:none; width:100%; height:60px; background:#eee; overflow:hidden;}
-.selectBox .header h4 { float:left; width:70%; height:60px; margin:0; padding:0; line-height:60px;  text-align:center; color:#333; font-size:22px; font-weight:700; }
-.selectBox .header .cannel, .header .done { width:15%; height:60px; line-height:60px; text-align:center; float:left;  color:#18B3EC; font-size:18px; font-weight:700; }*/
-
-
-.selectUl {margin:0; padding:0;}
-.selectUl .item { height:90px; line-height:90px;  margin:0; padding:0; text-align:center; background:#eee; border-bottom:1px solid #ccc; color:#aaa; list-style-type:none; font-size:28px; font-family:'黑体'; }
-.selectUl .item .value { display:none; }
-
-/* WebKit browsers */
-::-webkit-input-placeholder {
-	color: #c9c8cd;
-}
-/* Mozilla Firefox 4 to 18 */
-:-moz-placeholder {
-	color: #c9c8cd;
-	opacity: 1;
-}
-/* Mozilla Firefox 19+ */
-::-moz-placeholder {
-	color: #c9c8cd;
-	opacity: 1;
-}
-/* Internet Explorer 10+ */
-:-ms-input-placeholder {
-	color: #c9c8cd;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.select2 { padding-right:21px;background:url(http://htmbx.salesbang.cn/template_1/images/mobile/wsy/downAngel.png) right center no-repeat;}
-*/
-.mashDiv { width:100%; height:100%; display:none; background: rgb(0,0,0); opacity: 0.4; filter:alpha(opacity=40); position:absolute; top:0px; left:0px;  z-index:10;}
-.selectUl .item, .orderForm .item .filed, .orderForm .item .select { color:#333; font-family:"黑体"; }
-
-.mashDiv{position:fixed;}
-
-html, body {position: relative;height: 100%;}
-.swiper-container {width: 90%; height: 480px;margin:-240px 0 0 -45%;position: fixed; top:50%; left:50%; overflow: hidden;z-index: 11; border:1px solid red;}
-.swiper-slide {font-size: 18px;height: auto;-webkit-box-sizing: border-box;box-sizing: border-box;}
-/* Scrollbar */
-.swiper-scrollbar {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
-.swiper-container-vertical > .swiper-scrollbar {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
-
-.swiper-scrollbar1 {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
-.swiper-container-vertical > .swiper-scrollbar1 {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
-
-.swiper-scrollbar2 {border-radius: 10px;position: relative;-ms-touch-action: none;background: rgba(0, 0, 0, 0.1);}
-.swiper-container-vertical > .swiper-scrollbar2 {width: 5px;height: 98%;position: absolute;right: 3px;top: 1%;z-index: 50;}
-
-.swiper-scrollbar-drag {height: 100%;width: 100%;background: rgba(0, 0, 0, 0.5);border-radius: 10px;position: relative;left: 0;top: 0;}
-</style>
-
-<div class="mashDiv"></div>
-
-<div class="select2">
-<div class="select1">
-<input class="select testFiled" type="text" id="province" value="{{$provinceName}}" placeholder="省份" readonly readvalue="{{$provinceId}}"/>
-<input class="word" type="hidden" name="province" id="p" value="{{$provinceId}}">
-</div>
-</div>
-                
-                
-                
-<div class="select2">
-<div class="select1">
-<input class="select testFiled" type="text" id="city" value="{{$cityName}}" placeholder="城市" readonly readvalue="{{$cityId}}"/>
-<input class="word" type="hidden" name="city" id="c" value="{{$cityId}}">
-</div>
-</div>
-
-
-<div class="swiper-container province" style="visibility:hidden;">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<ul class="selectUl">
-            <li class="item"><span class="text">北京市</span><span class="value">1</span></li>
-			<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
-			<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
-			<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
-			<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
-			<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
-			<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
-			<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
-			<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
-			<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
-			<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
-			<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
-			<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
-			<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
-			<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
-			<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
-			<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
-			<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
-			<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
-			<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
-			<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
-			<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
-			<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
-			<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
-			<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
-			<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
-			<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
-			<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
-			<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
-			<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
-			<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
-			<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
-			<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
-			<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
-	</ul>
-</div>
-</div>
-<div class="swiper-scrollbar"></div>
-</div>
-              
-                
-<div class="swiper-container city" style="visibility:hidden;">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<ul class="selectUl cityItem" >
-            <li class="item"><span class="text">北京市</span><span class="value">1</span></li>
-			<li class="item"><span class="text">天津市</span><span class="value">2</span></li>
-			<li class="item"><span class="text">河北省</span><span class="value">3</span></li>
-			<li class="item"><span class="text">山西省</span><span class="value">4</span></li>
-			<li class="item"><span class="text">内蒙古自治区</span><span class="value">5</span></li>
-			<li class="item"><span class="text">辽宁省</span><span class="value">6</span></li>
-			<li class="item"><span class="text">吉林省</span><span class="value">7</span></li>
-			<li class="item"><span class="text">黑龙江省</span><span class="value">8</span></li>
-			<li class="item"><span class="text">上海市</span><span class="value">9</span></li>
-			<li class="item"><span class="text">江苏省</span><span class="value">10</span></li>
-			<li class="item"><span class="text">浙江省</span><span class="value">11</span></li>
-			<li class="item"><span class="text">安徽省</span><span class="value">12</span></li>
-			<li class="item"><span class="text">福建省</span><span class="value">13</span></li>
-			<li class="item"><span class="text">江西省</span><span class="value">14</span></li>
-			<li class="item"><span class="text">山东省</span><span class="value">15</span></li>
-			<li class="item"><span class="text">河南省</span><span class="value">16</span></li>
-			<li class="item"><span class="text">湖北省</span><span class="value">17</span></li>
-			<li class="item"><span class="text">湖南省</span><span class="value">18</span></li>
-			<li class="item"><span class="text">广东省</span><span class="value">19</span></li>
-			<li class="item"><span class="text">广西壮族自治区</span><span class="value">20</span></li>
-			<li class="item"><span class="text">海南省</span><span class="value">21</span></li>
-			<li class="item"><span class="text">重庆市</span><span class="value">22</span></li>
-			<li class="item"><span class="text">四川省</span><span class="value">23</span></li>
-			<li class="item"><span class="text">贵州省</span><span class="value">24</span></li>
-			<li class="item"><span class="text">云南省</span><span class="value">25</span></li>
-			<li class="item"><span class="text">西藏自治区</span><span class="value">26</span></li>
-			<li class="item"><span class="text">陕西省</span><span class="value">27</span></li>
-			<li class="item"><span class="text">甘肃省</span><span class="value">28</span></li>
-			<li class="item"><span class="text">青海省</span><span class="value">29</span></li>
-			<li class="item"><span class="text">宁夏回族自治区</span><span class="value">30</span></li>
-			<li class="item"><span class="text">新疆维吾尔自治区</span><span class="value">31</span></li>
-			<li class="item"><span class="text">台湾省</span><span class="value">32</span></li>
-			<li class="item"><span class="text">香港特别行政区</span><span class="value">33</span></li>
-			<li class="item"><span class="text">澳门特别行政区</span><span class="value">34</span></li>
-</ul>
-</div>
-</div>
-<div class="swiper-scrollbar1"></div>
-</div> 
-
-
-<script type="text/javascript" src="http://js.zfdmkj.com/template_1/js/www/2015/swiper.min.js"></script>
+<body>
+	
+	{{BEGIN list}}
+	<div class="wrap">
+		<div class="result">
+			<h2 class="detection-tit">诊断证明</h2>
+			<ul class="detection-info">
+				<li>
+					<table>
+						<tr class="detection-opt">
+							<td class="detection-item">公&nbsp;&nbsp;众&nbsp;&nbsp;号：</td>
+							<td>{{$WXname}}</td>
+						</tr>
+						<tr class="detection-opt">
+							<td class="detection-item">项&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td>
+							<td>{{$item}}</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+						<tr class="detection-opt">
+							<td class="detection-item">诊断结果：</td>
+							<td>{{$result}}</td>
+						</tr>
+						<tr class="detection-opt">
+							<td class="detection-item">处理建议：</td>
+							<td>{{$advice}}</td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div class="detection-sign">
+				<p>诊断医师：{{$doctor}}</p>
+				<p>日期：{{$time}}</p>
+			</div>
+			<div class="company-seal"></div>
+		</div>
+		<div class="topic">
+			<div class="topic-tit">
+				<hr>
+				<span>推荐阅读</span>
+			</div>
+            {{BEGIN article}}
+			<dl class="topic-art"> 
+				<a href="{{$artLink}}">
+					<dt class="art-pic">
+						<img src="{{$artImg}}" alt="{{$artTitle}}">
+					</dt>
+					<dd class="art-info">
+						<p class="art-tit">{{$artTitle}}</p>
+						<p class="art-des">{{$artDesc}}</p>			
+					</dd>
+					<span class="art-arrow"></span>
+				</a>
+			</dl>
+            {{END}}
+		</div>
+        {{IF $type == 'authentication' }}
+		<div class="contact-us" id="j-online-qq">不会认证？联系我们<span class="art-arrow"></span></div>
+        {{ELSEIF $type == 'gain' }}
+        <div class="contact-us" id="j-online-qq2">不会设置？联系我们<span class="art-arrow"></span></div>
+        {{END}}
+	</div>
+    {{END}}
+<script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
 <script>
-$("#province").focus(function(){
-	$('.mashDiv').show();
-	$(".province").css('visibility','visible');
-});
-$("#city").focus(function(){
-	$('.mashDiv').show();
-	$(".city").css('visibility','visible');
-});
-
-var swiper = new Swiper('.province', {
-	scrollbar: '.swiper-scrollbar',
-	direction: 'vertical',
-	slidesPerView: 'auto',
-	mousewheelControl: true,
-	freeMode: true
-});
-
-var swiper1 = new Swiper('.city', {
-	scrollbar: '.swiper-scrollbar1',
-	direction: 'vertical',
-	slidesPerView: 'auto',
-	mousewheelControl: true,
-	freeMode: true
-});
+	//QQ客服接口
+    BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq'});
+	BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq2'});
 </script>
 </body>
 </html>
