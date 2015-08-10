@@ -1,14 +1,15 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-title" content="诊断详情"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-title" content="诊断详情"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" /> 
 	<meta name="apple-touch-fullscreen" content="yes">
 	<title>诊断详情</title>
-    <link type="text/css" href="{{$cssUrlPath}}template_1/styles/mobile/wechat/detection/detectionResult.css" rel="stylesheet">
+    <link type="text/css" href="http://css.zfdmkj.com/template_1/styles/mobile/wechat/detection/detectionResult.css" rel="stylesheet">
 	<script type="text/javascript">
 	//百度统计
 	var _hmt = _hmt || [];
@@ -23,7 +24,6 @@
 
 <body>
 	
-	{{BEGIN list}}
 	<div class="wrap">
 		<div class="result">
 			<h2 class="detection-tit">诊断证明</h2>
@@ -32,11 +32,11 @@
 					<table>
 						<tr class="detection-opt">
 							<td class="detection-item">公&nbsp;&nbsp;众&nbsp;&nbsp;号：</td>
-							<td>{{$WXname}}</td>
+							<td>天翼港澳通</td>
 						</tr>
 						<tr class="detection-opt">
 							<td class="detection-item">项&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目：</td>
-							<td>{{$item}}</td>
+							<td>微信号</td>
 						</tr>
 					</table>
 				</li>
@@ -44,18 +44,18 @@
 					<table>
 						<tr class="detection-opt">
 							<td class="detection-item">诊断结果：</td>
-							<td>{{$result}}</td>
+							<td>未设置微信号，不利于粉丝搜索关注您的公众号哦！</td>
 						</tr>
 						<tr class="detection-opt">
 							<td class="detection-item">处理建议：</td>
-							<td>{{$advice}}</td>
+							<td>建议使用电脑登陆公众平台设置微信号(http://mp.weixin.qq.com)。</td>
 						</tr>
 					</table>
 				</li>
 			</ul>
 			<div class="detection-sign">
-				<p>诊断医师：{{$doctor}}</p>
-				<p>日期：{{$time}}</p>
+				<p>诊断医师：Chow</p>
+				<p>日期：08/10</p>
 			</div>
 			<div class="company-seal"></div>
 		</div>
@@ -64,28 +64,20 @@
 				<hr>
 				<span>推荐阅读</span>
 			</div>
-            {{BEGIN article}}
 			<dl class="topic-art"> 
-				<a href="{{$artLink}}">
+				<a href="http://m2.zfdmkj.com/wechat/zfdm/bookArticle.php?id=449&type=1">
 					<dt class="art-pic">
-						<img src="{{$artImg}}" alt="{{$artTitle}}">
+						<img src="http://img.zfdmkj.com/bookPhoto/201507/1436945654.jpg" alt="【公众号信息设置】如何让别人一眼记住你的公众号">
 					</dt>
 					<dd class="art-info">
-						<p class="art-tit">{{$artTitle}}</p>
-						<p class="art-des">{{$artDesc}}</p>			
+						<p class="art-tit">【公众号信息设置】如何让别人一眼记住你的公众号</p>
+						<p class="art-des">【公众号信息设置】如何让别人一眼记住你的公众号</p>			
 					</dd>
 					<span class="art-arrow"></span>
 				</a>
 			</dl>
-            {{END}}
 		</div>
-        {{IF $type == 'authentication' }}
-		<div class="contact-us" id="j-online-qq">不会认证？联系我们<span class="art-arrow"></span></div>
-        {{ELSEIF $type == 'gain' }}
-        <div class="contact-us" id="j-online-qq2">不会设置？联系我们<span class="art-arrow"></span></div>
-        {{END}}
 	</div>
-    {{END}}
 <script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
 <script>
 	//QQ客服接口
