@@ -11,12 +11,6 @@
     <meta name="keywords" content="运营宝典" />
     <meta name="description" content="运营宝典" />
     <meta name="ROBOTS" content="all" />
-
-	<script type="text/javascript" src="http://js.zfdmkj.com/template_1/js/mobile/rank/jquery-1.11.0.min.js"></script>
-	<script src="http://js.zfdmkj.com/template_1/js/mobile/rank/jquery.lazyload.min.js"></script>
-	<script>
-		 $("img").lazyload({effect: "fadeIn"});	
-	</script>
 </head>
 
 <body>
@@ -77,81 +71,3 @@
 
 </body>
 </html>
-<script type="text/javascript" src="http://js.zfdmkj.com/template_1/js/plugin/jquery-1.8.3.min.js"></script>
-
-<script type="text/javascript">
-$(function(){  
-var imglist =document.getElementsByTagName("img");  
-//安卓4.0+等高版本不支持window.screen.width，安卓2.3.3系统支持  
-var _width;  
-doDraw();  
-  
-window.onresize = function(){  
-    //捕捉屏幕窗口变化，始终保证图片根据屏幕宽度合理显示  
-    doDraw();  
-}  
-  
-function doDraw(){  
-    _width = window.innerWidth;
-    for( var i = 0, len = imglist.length; i < len; i++){  
-        DrawImage(imglist[i],_width);  
-    }  
-}  
-  
-function DrawImage(ImgD,_width){   
-    var image=new Image();
-    image.src=ImgD.src;   
-    image.onload = function(){  
-        //限制，只对宽高都大于30的图片做显示处理  
-        if(image.width>30){   
-            if(image.width>_width){  
-                ImgD.width=_width;   
-            }else{   
-                ImgD.width=image.width;   
-            }   
-  
-        }     
-    }  
-  
-}  
-     
-});
-	/*  document.addEventListener("DOMContentLoaded", function(event){
-		ImagesZoom.init({
-			"elem": "p"
-		});
-	}, false); */
-	 
-	 /*  $("p img").click(function(){
-		  var src = $(this).attr("src");
-	 });
-	   */
-	 
- 
-//图片处理
-$(function(){
-	var browserW = $(window).width();
-	$("img").each(function(){
-		var imgW = $(this).width();
-		if(imgW >= browserW ){
-			$(this).css("width","98%");
-		}
-	});
-});
-
-//
-/**
- * 滚动浮动
- */
-/* $(window).scroll( function() {
-       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//滚动的高度
-       if(scrollTop > 0){
-           $('.articleHeader').addClass('shadow');
-       }else{
-            $('.articleHeader').removeClass('shadow');
-       }
-
-} );  */
-
-
-</script>
