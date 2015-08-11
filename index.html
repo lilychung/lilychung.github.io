@@ -1,29 +1,16 @@
-
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html leng='zh-CN'>
 <head>
-	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-title" content="公众助手">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>运营宝典-公众助手</title>
-    <meta name="keywords" content="运营宝典" />
-    <meta name="description" content="运营宝典" />
-    <meta name="ROBOTS" content="all" />
-	<script type="text/javascript">
-	//百度统计
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
-</head>
-<style>
-@charset "utf-8";
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="测试页"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-touch-fullscreen" content="yes">
+    <meta name="full-screen" content="yes"><!-- UC强制全屏 -->
+    <meta name="x5-fullscreen" content="true"><!-- QQ强制全屏 -->
+	<title>测试页</title>
+<style type="text/css">
 /*重置reset css*/
 body,div,p,blockquote,
 ul,ol,dl,li,dt,dd,
@@ -44,16 +31,16 @@ body{font:14px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\
 .clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
 
 /*页面公用样式*/
-html,body{width:100%; height:100%; background: #efeff4;}
+html,body{width: 100%; height:100%; margin:0 auto; background: #fff;}
 a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
-.company-seal,.art-arrow{background-image: url(/template_1/images/mobile/detection/icons.png); background-repeat: no-repeat;}/*拼图*/
-.art-arrow{width: 20px; height: 30px; background-position: 0 0; position: absolute; top: 50%; right: 20px; margin-top: -15px;}/*三角箭头 通用*/
+.wrap{max-width: 640px; min-width: 320px; margin: 0 auto; padding-top:30px;  background: #efeff4;}
+
 /*诊断结果*/
-.result{margin-top:30px; background: url(/template_1/images/mobile/detection/bg-rep.png) repeat; position: relative;}
-.detection-tit{padding:20px 0; text-align: center; border-bottom: 1px solid #8a8789;}
+.result{background: url(images/bg-rep.png) repeat; position: relative; font-size: 28px;}
+.detection-tit{padding:20px 0; text-align: center; border-bottom: 1px solid #8a8789; font-size: 32px; }
 .detection-info li{padding:20px; border-bottom: 1px solid #8a8789;}
 .detection-opt td{padding:10px 0;}
-.detection-item{width: 80px; color: #666; vertical-align: top;}
+.detection-item{width: 150px; color: #666; vertical-align: top;}
 .detection-sign{padding:20px 20px 20px 0; text-align: right; color: #666;}
 .company-seal{width: 190px; height: 190px; background-position: -50px 0; position: absolute; bottom: 20px; right: 30px;}
 /*推荐阅读*/
@@ -64,14 +51,16 @@ a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 .topic-art{height: 80px; padding:20px; margin-top:20px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; overflow: hidden;}
 .topic-art a{height: 100%; display: block;}
 .art-pic{float: left;}
-.art-info{width:200px; padding-left: 20px; float: left;}/* 添加宽度控制字数 */
-.art-tit{-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.art-pic img{width: 80px; height: 80px;}
+.art-info{width:380px; padding-left: 20px; float: left;}
+.art-tit{font-size: 28px; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 .art-des{color: #8a8a8a; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 /*联系我们*/
 .contact-us{height: 42px; padding:20px; margin-top:30px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; cursor: pointer;}
 </style>
+</head>
+
 <body>
-	
 	<div class="wrap">
 		<div class="result">
 			<h2 class="detection-tit">诊断证明</h2>
@@ -102,35 +91,32 @@ a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 				</li>
 			</ul>
 			<div class="detection-sign">
-				<p>诊断医师：Chow</p>
-				<p>日期：08/10</p>
+				<p>诊断医师：chow</p>
+				<p>日期：08/11</p>
 			</div>
 			<div class="company-seal"></div>
 		</div>
 		<div class="topic">
-			<div class="topic-tit">
-				<hr>
-				<span>推荐阅读</span>
+				<div class="topic-tit">
+					<hr>
+					<span>推荐阅读</span>
+				</div>
+				<dl class="topic-art"> 
+					<a href="{{$artLink}}">
+						<dt class="art-pic">
+							<img src="http://img.zfdmkj.com/bookPhoto/201507/1436945654.jpg" alt="{{$artTitle}}">
+						</dt>
+						<dd class="art-info">
+							<p class="art-tit">【公众号信息设置】如何让别人一眼记住你的公众号</p>
+							<p class="art-des">【公众号信息设置】如何让别人一眼记住你的公众号</p>			
+						</dd>
+						<span class="art-arrow"></span>
+					</a>
+				</dl>
 			</div>
-			<dl class="topic-art"> 
-				<a href="http://m2.zfdmkj.com/wechat/zfdm/bookArticle.php?id=449&type=1">
-					<dt class="art-pic">
-						<img src="http://img.zfdmkj.com/bookPhoto/201507/1436945654.jpg" alt="【公众号信息设置】如何让别人一眼记住你的公众号" width="60" height="60">
-					</dt>
-					<dd class="art-info">
-						<p class="art-tit">【公众号信息设置】如何让别人一眼记住你的公众号</p>
-						<p class="art-des">【公众号信息设置】如何让别人一眼记住你的公众号</p>			
-					</dd>
-					<span class="art-arrow"></span>
-				</a>
-			</dl>
+			<div class="contact-us" id="j-online-qq">不会认证？联系我们<span class="art-arrow"></span></div>
+	        <!-- <div class="contact-us" id="j-online-qq2">不会设置？联系我们<span class="art-arrow"></span></div> -->
 		</div>
 	</div>
-<script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
-<script>
-	//QQ客服接口
-    BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq'});
-	BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'j-online-qq2'});
-</script>
 </body>
 </html>
