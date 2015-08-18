@@ -33,14 +33,14 @@ body{font:14px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\
 /*页面公用样式*/
 html,body{width: 100%; height:100%; margin:0 auto; background: #fff;}
 a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
-.wrap{padding-top:30px;  background: #efeff4;}
+.wrap{margin: 0 auto; padding-top:30px;  background: #efeff4;}
 
 /*诊断结果*/
-.result{background: url(images/bg.png) no-repeat center center; position: relative; font-size: 20px;}
-.detection-tit{padding:20px 0; text-align: center; border-bottom: 1px solid #8a8789; font-size: 24px; }
+.result{background: url(img/bg-rep.png) repeat; position: relative; font-size: 28px;}
+.detection-tit{padding:20px 0; text-align: center; border-bottom: 1px solid #8a8789; font-size: 32px; }
 .detection-info li{padding:20px; border-bottom: 1px solid #8a8789;}
 .detection-opt td{padding:10px 0;}
-.detection-item{width: 100px; color: #666; vertical-align: top;}
+.detection-item{width: 150px; color: #666; vertical-align: top;}
 .detection-sign{padding:20px 20px 20px 0; text-align: right; color: #666;}
 .company-seal{width: 190px; height: 190px; background-position: -50px 0; position: absolute; bottom: 20px; right: 30px;}
 /*推荐阅读*/
@@ -52,8 +52,8 @@ a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 .topic-art a{height: 100%; display: block;}
 .art-pic{float: left;}
 .art-pic img{width: 80px; height: 80px;}
-.art-info{width:200px; padding-left: 20px; float: left;}
-.art-tit{font-size: 20px; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.art-info{width:380px; padding-left: 20px; float: left;}
+.art-tit{font-size: 28px; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 .art-des{color: #8a8a8a; -o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 /*联系我们*/
 .contact-us{height: 42px; padding:20px; margin-top:30px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; background-color: #fff; position: relative; cursor: pointer;}
@@ -96,27 +96,26 @@ a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 			</div>
 			<div class="company-seal"></div>
 		</div>
-		<div class="topic">
-				<div class="topic-tit">
-					<hr>
-					<span>推荐阅读</span>
-				</div>
-				<dl class="topic-art"> 
-					<a href="{{$artLink}}">
-						<dt class="art-pic">
-							<img src="http://img.zfdmkj.com/bookPhoto/201507/1436945654.jpg" alt="{{$artTitle}}">
-						</dt>
-						<dd class="art-info">
-							<p class="art-tit">【公众号信息设置】如何让别人一眼记住你的公众号</p>
-							<p class="art-des">【公众号信息设置】如何让别人一眼记住你的公众号</p>			
-						</dd>
-						<span class="art-arrow"></span>
-					</a>
-				</dl>
-			</div>
-			<div class="contact-us" id="j-online-qq">不会认证？联系我们<span class="art-arrow"></span></div>
-	        <!-- <div class="contact-us" id="j-online-qq2">不会设置？联系我们<span class="art-arrow"></span></div> -->
-		</div>
+        <div class="topic">
+            <div class="topic-tit">
+                <hr>
+                <span>推荐阅读</span>
+            </div>
+            <dl class="topic-art"> 
+                <a href="{{$artLink}}">
+                    <dt class="art-pic">
+                        <img src="http://img.zfdmkj.com/bookPhoto/201507/1436945654.jpg" alt="{{$artTitle}}">
+                    </dt>
+                    <dd class="art-info">
+                        <p class="art-tit">【公众号信息设置】如何让别人一眼记住你的公众号</p>
+                        <p class="art-des">【公众号信息设置】如何让别人一眼记住你的公众号</p>			
+                    </dd>
+                    <span class="art-arrow"></span>
+                </a>
+            </dl>
+        </div>
+		<div class="contact-us" id="j-online-qq">不会认证？联系我们<span class="art-arrow"></span></div>
+        <!-- <div class="contact-us" id="j-online-qq2">不会设置？联系我们<span class="art-arrow"></span></div> -->
 	</div>
 </body>
 </html>
