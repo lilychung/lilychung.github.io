@@ -1,16 +1,24 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
 <body>
-<script type="text/javascript">
-function noNumbers()
-{
-alert("success");
-location.href = 'http://www.baidu.com';
+转到第<Input type='text' name='page' size='3' maxlength='5' value='1' onKeyPress="gopage(this.value,13)">页
+<script language='javascript'>
+function gopage(page,totalpage){
+	if (event.keyCode==13){
+		window.location='http://www.vip.com';
+	}
+	else{
+		if (et.which==13)
+		{
+			window.location='http://www.pclady.com.cn';
+		}
+	}
 }
 </script>
-
-<form>
-Type some text (numbers not allowed):
-<input type="text" onkeydown="javascript:if(event.keyCode==13){noNumbers();return false;}" />
-</form>
-
+</body>
 </html>
