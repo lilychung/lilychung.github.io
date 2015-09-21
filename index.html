@@ -1,194 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=640, user-scalable=no" />
-	<meta name="apple-mobile-web-app-title" content="专业服务"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-	<meta name="apple-touch-fullscreen" content="yes">
-	<title>专业服务</title>
-    <link type="text/css" href="css/service.css" rel="stylesheet">
-	<script type="text/javascript">
-	//百度统计
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
-	<style>
-.swiper-container {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.swiper-container-no-flexbox .swiper-slide {
-  float: left;
-}
-.swiper-container-vertical > .swiper-wrapper {
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
-  transition-property: transform;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-  -moz-transform: translate3d(0px, 0, 0);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate3d(0px, 0, 0);
-  transform: translate3d(0px, 0, 0);
-}
-.swiper-slide {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-flex-shrink: 0;
-  -ms-flex: 0 0 auto;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.swiper-pagination {
-  position: absolute;
-  text-align: center;
-  -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -o-transition: 300ms;
-  transition: 300ms;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  z-index: 10;
-}
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  border-radius: 100%;
-  background: #000;
-  opacity: 0.2;
-}
-.swiper-pagination-clickable .swiper-pagination-bullet {
-  cursor: pointer;
-}
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #007aff;
-}
-.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
-  margin: 0 5px;
-}
-
-
-
-@charset "utf-8";
-/*重置reset css*/
-body,div,p,blockquote,
-ul,ol,dl,li,dt,dd,
-form,fieldset,legend,input,button,textarea,tr,td,th,
-h1,h2,h3,h4,h5,h5,hr
-{margin:0; padding:0;}
-article,nav,section,aside,header,footer,hgroup,figure,figcaption
-{margin:0; padding:0; display:block;}/*HTML5 TAG*/
-h1,h2,h3,h4,h5,h6{font-size:100%;}
-h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
-ul,li{list-style:none;}
-em,i{font-style:normal;}
-img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
-html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
-.video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
-.clearfix{zoom:1;}
-.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
-
-/*页面公用样式*/
-html,body{width:100%; height:100%; max-width: 640px; margin: 0 auto; background: #fff;}
-a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
-.tel,.online_qq{background-image: url(../images/icons.png); background-repeat: no-repeat;}/*拼图/template_1/images/mobile/detection/icons.png*/
-
-
-.swiper-container {width: 100%; margin: 0 auto; position: relative; overflow: hidden; z-index: 1; }
-.swiper-wrapper {width: 100%; z-index: 1; display: flex; position: relative; }
-.swiper-slide {width: 100%; position: relative; flex-shrink: 0; }
-.swiper-pagination {width: 100%; position: absolute; bottom: 10px; left: 0; text-align: center; z-index: 2; }
-.swiper-pagination-bullet {width: 15px; height: 15px; margin: 0 5px; display: inline-block; border-radius: 100%; background: #fff; border: 1px solid #409bcf; cursor: pointer; }
-.swiper-pagination-bullet-active {background: #409bcf; border: 1px solid #409bcf;}
-
-.contact{height: 96px; border-top: 1px solid #d9d6d6; border-bottom: 1px solid #d9d6d6;}
-.contact li{width: 320px; height: 96px; float: left; background-color: #f7f6f7; cursor: pointer;}
-.contact li:last-child{margin-left: -1px; border-left: 1px solid #d9d6d6;}
-.tel,.online_qq{margin:30px 0 0 75px; display: block; padding-left: 50px; color: #019beb; font-size: 32px;}
-.tel{background-position: 0 5px;}
-.online_qq{background-position: 0 -48px;}
-
-
-	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
 </head>
+
 <body>
-	<div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/v01.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/v02.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/v03.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/s01.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/s02.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/g03.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/g01.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/g02.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/g03.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/w01.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/w02.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/w03.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/w04.png" alt=""></div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <ul class="contact">
-    	<li><span class="tel">咨询电话</span></li>
-    	<li><span class="online_qq">在线客服</span></li>
-    </ul>
-<script src="http://js.zfdmkj.com/template_1/js/www/2015/swiper.min.js"></script><!--触摸滑动-->
-<script>
-	//触摸滑动
-	var swiper = new Swiper('.swiper-container', {
-		pagination: '.swiper-pagination',
-		paginationClickable: true,
-		spaceBetween: 0,
-		autoplay: 2500,
-        autoplayDisableOnInteraction: false
-	});
+转到第<Input type='text' name='page' size='3' maxlength='5' value='1' onKeyPress="gopage(this.value,13)">页
+<script language='javascript'>
+function gopage(page,totalpage){
+  if (event.keyCode==13){
+    if(Math.abs(page)>totalpage) page=totalpage;
+    if(Math.abs(page)>1) window.location='http://Linux.chinaitlab.com/List_128_'+(totalpage-Math.abs(page)+1)+'.html';
+    else  window.location='http://Linux.chinaitlab.com/List_128.html';
+  }
+}
 </script>
 </body>
 </html>
