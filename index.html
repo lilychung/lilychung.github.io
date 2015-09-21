@@ -13,7 +13,7 @@ function keyNumAll(evt){
 	//兼容IE和Firefox获得keyBoardEvent对象 
 	evt = (evt) ? evt : ((window.event) ? window.event : ""); 
 	var key = evt.keyCode?evt.keyCode:evt.which;//兼容IE和Firefox获得keyBoardEvent对象的键值 
-	alert(key);//显示按键键值 
+	//alert(key);//显示按键键值 
 	if(key == 13){
 		window.location.href = "http://www.vip.com/";
 	}
