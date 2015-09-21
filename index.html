@@ -6,19 +6,14 @@
 </head>
 
 <body>
-转到第<Input type='text' name='page' size='3' maxlength='5' value='1' onKeyPress="gopage(this.value,13)">页
+<input type="text" onkeydown="keyNumAll(event);" > 
 <script language='javascript'>
-function gopage(page,totalpage){
-	if (event.keyCode==13){
-		window.location='http://www.vip.com';
-	}
-	else{
-		if (et.which==13)
-		{
-			window.location='http://www.pclady.com.cn';
-		}
-	}
-}
+function keyNumAll(evt){ 
+	//兼容IE和Firefox获得keyBoardEvent对象 
+	evt = (evt) ? evt : ((window.event) ? window.event : ""); 
+	var key = evt.keyCode?evt.keyCode:evt.which;//兼容IE和Firefox获得keyBoardEvent对象的键值 
+	console.info(key);//显示按键键值 
+} 
 </script>
 </body>
 </html>
