@@ -1,23 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="微信认证"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" /> 
+	<meta name="apple-touch-fullscreen" content="yes">
+	<title>微信认证</title>
+    <link type="text/css" href="http://css.zfdmkj.com/template_1/styles/mobile/wechat/service/service.css" rel="stylesheet">
+	<script type="text/javascript">
+	</script>
 </head>
-
+<style>
+.menu{width: 100%; overflow-x: hidden;}
+.menu_items{width: 50%; height: 162px; float: left; border-top: 1px solid #e0e0e0; border-left: 1px solid #e0e0e0;}
+.menu_items a{height: 245px; padding: 80px 0 0 100px; display: block;}
+.menu_items span{width: 120px; height: 140px; display: block; background-image: url(images/icons.png); background-repeat: no-repeat;}
+.menu_v{background-position: 0 0;}
+.menu_s{background-position: -150px 0;}
+.menu_zf{background-position: -300px 0;}
+.menu_g{background-position: -450px 0;}
+</style>
 <body>
-<input type="text" onkeydown="keyNumAll(event);" > 
-<script src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
-<script language='javascript'>
-function keyNumAll(evt){ 
-	//兼容IE和Firefox获得keyBoardEvent对象 
-	evt = (evt) ? evt : ((window.event) ? window.event : ""); 
-	var key = evt.keyCode?evt.keyCode:evt.which;//兼容IE和Firefox获得keyBoardEvent对象的键值 
-	//alert(key);//显示按键键值 
-	if(key == 13){
-		window.location.href = "http://www.vip.com/";
-	}
-} 
+	<div class="wrap">
+		<div class="focus"><img src="http://htm.zfdmkj.com/template_1/images/mobile/service/f_index.jpg" alt="加V认证，我就是官方"></div>
+		<ul class="menu">
+			<li class="menu_items"><a href=""><span class="menu_v"></a></span></li>
+			<li class="menu_items"><a href=""><span class="menu_s"></a></span></li>
+			<li class="menu_items"><a href=""><span class="menu_zf"></a></span></li>
+			<li class="menu_items"><a href=""><span class="menu_g"></a></span></li>
+		</ul>
+	</div>
+
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
 </script>
 </body>
 </html>
