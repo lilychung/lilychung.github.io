@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-title" content="404"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-	<meta name="apple-touch-fullscreen" content="yes">
-	<title>404</title>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="任务详情"> 
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>任务详情</title>
 </head>
 <body>
-<style type="text/css">
+<style>
 @charset "utf-8";
 /*重置reset css*/
 body,div,p,blockquote,
@@ -21,26 +21,63 @@ h1,h2,h3,h4,h5,h5,hr
 article,nav,section,aside,header,footer,hgroup,figure,figcaption
 {margin:0; padding:0; display:block;}/*HTML5 TAG*/
 h1,h2,h3,h4,h5,h6{font-size:100%;}
-h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
 ul,li{list-style:none;}
 em,i{font-style:normal;}
-html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
 img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
+html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
 .video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:12px/1 arial,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
+body{font:14px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
 .clearfix{zoom:1;}
 .clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
 
 /*页面公用样式*/
-html,body{width:100%; background: #fff;}
+html,body{width:100%; height:100%; max-width: 640px; margin: 0 auto; background: #fff;}
+a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 
-.wrap{margin-top: 150px; text-align: center;}
-h1{margin-top: 40px; font-size: 120px;}
+/* 推广任务详情 */
+.wrap{padding: 0 20px;}
+dt{margin: 20px 0; font-size: 32px;}
+dd{text-align: center;}
+
 </style>
+    <div class="wrap">
+        
+        <dl>
+            <dt>任务示例：</dt>
+            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/tw_result.jpg" alt="图文推广-任务示例"></dd>
+        </dl>
+        <dl>
+            <dt>1、复制链接，并添加到我的图文素材库</dt>
+            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/tw_step01.png" alt="图文推广-步骤"></dd>
+        </dl>
+        <dl>
+            <dt>2、群发所有— —群发刚刚编辑的文章</dt>
+            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/tw_step02.png" alt="图文推广-步骤"></dd>
+        </dl>
+        
+        <dl>
+            <dt>任务示例：</dt>
+            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_result.jpg" alt="二维码任务-任务示例"></dd>
+        </dl>
+        <dl>
+            <dt>1、复制链接，并添加到我的图文素材库</dt>
+            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_step01.jpg" alt="二维码任务-步骤"></dd>
+        </dl>
+        <dl>
+            <dt>2、群发所有— —群发刚刚编辑的文章</dt>
+            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_step02.jpg" alt="二维码任务-步骤"></dd>
+        </dl>
+    </div>
 
-<div class="wrap">
-	<p>抱歉!您访问的页面不存在。</p>
-	<h1>404</h1>
-</div>
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </body>
 </html>
