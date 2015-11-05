@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <meta name="apple-mobile-web-app-title" content="任务详情"> 
     <meta name="apple-mobile-web-app-capable" content="yes" /> 
     <meta name="apple-touch-fullscreen" content="yes">
@@ -31,42 +31,30 @@ body{font:14px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\
 .clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
 
 /*页面公用样式*/
-html,body{width:100%; height:100%; max-width: 640px; margin: 0 auto; background: #fff;}
+html,body{width:100%; height:100%; margin: 0 auto; background: #f1f0f8; -webkit-box-sizing: border-box; box-sizing: border-box;}
 a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
 
 /* 推广任务详情 */
-.wrap{padding: 0 20px;}
-dt{margin: 20px 0; font-size: 32px;}
-dd{text-align: center;}
+.wrap{padding: 30px 20px 0 20px;}
+.task_example dt{margin-bottom: 20px; font-size: 16px;}
+.task_example dd{text-align: center;}
+.task_step dt{text-align: center;}
+.task_step dd{margin: 20px 0 50px; font-size: 16px;}
+.task_btn_area{padding-bottom: 100px;}
 
+dl{width: 100%;}
+.img{width: 50%;}
+.img2{width: 60%;}
 </style>
     <div class="wrap">
-        
-        <dl>
-            <dt>任务示例：</dt>
-            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/tw_result.jpg" alt="图文推广-任务示例"></dd>
-        </dl>
-        <dl>
-            <dt>1、复制链接，并添加到我的图文素材库</dt>
-            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/tw_step01.png" alt="图文推广-步骤"></dd>
-        </dl>
-        <dl>
-            <dt>2、群发所有— —群发刚刚编辑的文章</dt>
-            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/tw_step02.png" alt="图文推广-步骤"></dd>
-        </dl>
-        
-        <dl>
-            <dt>任务示例：</dt>
-            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_result.jpg" alt="二维码任务-任务示例"></dd>
-        </dl>
-        <dl>
-            <dt>1、复制链接，并添加到我的图文素材库</dt>
-            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_step01.jpg" alt="二维码任务-步骤"></dd>
-        </dl>
-        <dl>
-            <dt>2、群发所有— —群发刚刚编辑的文章</dt>
-            <dd><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_step02.jpg" alt="二维码任务-步骤"></dd>
-        </dl>
+                <dl class="task_step">
+                    <dt><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_step01.jpg" alt="二维码任务-步骤" class="img"></dt>
+                    <dd>1、保存需要推广的公众号二维码</dd>
+                </dl>
+                <dl class="task_step task_btn_area">
+                    <dt><img src="http://htm.zfdmkj.com/template_1/images/mobile/promotion/code_step02.jpg" alt="二维码任务-步骤" class="img2"></dt>
+                    <dd>2、在需要发送的图文素材底部添加公众号简介和刚刚保存的二维码</dd>
+                </dl>
     </div>
 
 <script>
