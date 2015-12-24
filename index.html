@@ -4,75 +4,37 @@
 <head>
 	<meta http-equiv="Content-Type" content="charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<!-- <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi"> -->
+	<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
     <!-- <meta name="viewport" content="width=640,user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> -->
 	<meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
 	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
 	<meta name="apple-touch-fullscreen" content="yes">
 	<title>公众号助手 - 微信公众平台手机端</title>
   	<meta name="keywords" content="微信公众平台,微信公众号助手,公众号登陆,公众号注册申请,微信认证,微信营销,珍分夺秒科技"/>
   	<meta name="description" content="公众号助手，是微信公众平台的手机端，直接手机管理微信公众账号。实现公众帐号运营者与粉丝之间的实时互动。同时，也可能是国内最专业的微信公众号服务商，基于公众号为客户提供账号注册、开发、运营、推广一体化解决方案。"/>
-	<link type='text/css'  href="http://css.zfdmkj.com/template_1/styles/m_www/2015/index.css" media="all" rel="stylesheet" />
-
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <nav class="top-nav">
-               		<a href="article.php" target="_self">运营资讯</a>
-                    <a href="service.php" target="_self">专业服务</a>
-                    <a href="about_us.php" target="_self">联系我们</a>
-                </nav>
-                <div class="c-logo">
-                    <img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/index.png" alt="公众号助手">
-                    <h2>公众平台手机端，微商运营微店必备</h2>
-                </div>
-                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.bangyibang.weixinmh" class="btn-download">免费下载</a>
-            </div>
-            <div class="swiper-slide bg">
-                <div class="c-txt">
-                    <h3>粉丝消息</h3>
-                    <strong>随时随地实时对话、自动回复</strong>
-                </div>
-                <img class="c_img" src="http://htm.zfdmkj.com/template_1/images/m_www/2015/f_01.png" alt="粉丝消息">
-            </div>
-            <div class="swiper-slide bg">
-                <div class="c-txt">
-                    <h3>运营宝典</h3>
-                    <strong>思路讲解、工具解剖、案例分析、政策解读</strong>
-                </div>
-                <img class="c_img" src="http://htm.zfdmkj.com/template_1/images/m_www/2015/f_02.png" alt="运营宝典">
-            </div>
-            <div class="swiper-slide bg">
-                <div class="c-txt">
-                    <h3>公众号排行榜</h3>
-                    <strong>与全国同类公众号PK，发现你的排名</strong>
-                </div>
-                <img class="c_img" src="http://htm.zfdmkj.com/template_1/images/m_www/2015/f_03.png" alt="公众号排行榜">
-            </div>
-        </div>
-    </div>
-    <div class="swiper-button-next"></div>
-	
-    <!--触摸滑动-->
-    <script src="http://js.zfdmkj.com/template_1/js/www/2015/swiper.min.js"></script>
-    <!--微信分享自定义接口-->
-    <script>
-	//添加百度统计代码
-	var _hmt = _hmt || [];
-	(function() {
-		var hm = document.createElement("script");
-		hm.src = "//hm.baidu.com/hm.js?c59b75b212b6f6770311fa32750eab76";
-		var s = document.getElementsByTagName("script")[0]; 
-		s.parentNode.insertBefore(hm, s);
-	})();
-    //触摸滑动
-    var swiper = new Swiper('.swiper-container', {
-        nextButton: '.swiper-button-next',
-        direction: 'vertical'
-    });
+<script type="text/javascript">
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            document.writeln("您的浏览设备为：");
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                document.writeln("phone");
+            } else {
+                document.writeln("pc");
+            }
+        }
+
+        browserRedirect();
     </script>
 </body>
 </html>
