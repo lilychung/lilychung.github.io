@@ -1,37 +1,635 @@
 
-<!DOCTYPE html>
-<html leng="zh-CN">
+<!doctype html>
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
-    <!-- <meta name="viewport" content="width=640,user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> -->
-	<meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-	<meta name="apple-touch-fullscreen" content="yes">
-	<title>公众号助手 - 微信公众平台手机端</title>
-  	<meta name="keywords" content="微信公众平台,微信公众号助手,公众号登陆,公众号注册申请,微信认证,微信营销,珍分夺秒科技"/>
-  	<meta name="description" content="公众号助手，是微信公众平台的手机端，直接手机管理微信公众账号。实现公众帐号运营者与粉丝之间的实时互动。同时，也可能是国内最专业的微信公众号服务商，基于公众号为客户提供账号注册、开发、运营、推广一体化解决方案。"/>
+<meta charset="utf-8">
+<title>滴滴专车</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<style type="text/css">
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent
+}
+ul, ol, li, dl, dd, dt {
+	margin: 0;
+	padding: 0
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 200
+}
+li {
+	list-style-type: none
+}
+a, a:hover {
+	color: #666;
+	text-decoration: none;
+}
+a, area {
+	outline: none;
+blr:expression(this.onFocus=this.blur())
+}
+a:focus {
+	outline: none;
+	-moz-outline-style: none
+}
+input {
+	font-family: 'Helvetica';
+}
+html,body {
+	overflow:auto;overflow-x:hidden
+}
+.hide {
+	display: none !important;
+}
+.hidden {
+	/*display:none; */
+	opacity: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+	color: #666;
+	font-family: 'Helvetica';
+	font-size: 14px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background: #ededed;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.clearfix {
+	display: inline-block
+}
+.clearfix {
+	display: block
+}
+.clear {
+	clear: both;
+	height: 0;
+	font: 0/0 Arial;
+	visibility: hidden
+}
+.lf {
+	float: left;
+}
+.ri {
+	float: right;
+}
+.line {
+	height: 1px;
+	border-bottom: 1px solid #dbdbdc;
+	width: 150%;
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-transform-origin: top right;
+	transform-origin: top right;
+}
+.line_top1 {
+	top: 438px; /*right:-30px;*/ 
+}
+.line_top2 {
+	top: 852px;/*right:-34px;*/
+}
+.line_top3 {
+	top: 1273px;/*right:-48px;*/
+}
+.line_top4 {
+	top: 1692px;/*right:-28px;*/
+}
+.content {
+	width: 320px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+.trip_box {
+	width: 180px;
+	height: 60px;
+	background: #ededed;
+	text-align: center;
+	margin: 47px auto 36px auto;
+	padding-top: 10px;
+}
+.round_box {
+	width: 278px;
+	height: 278px;
+	margin: 0 auto;
+	border-radius: 100%;
+	background:url(images/ordershare/bg.png?version=20140901) left top no-repeat;
+	background-size:278px 278px;
+}
+.driver_info {
+	padding: 40px 0 0 58px;
+	height: 75px;
+}
+.driver_info .driver_img {
+	width: 70px;
+	height: 70px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	float: left;
+}
+.driver_info .driver_img img {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+}
+.driver_info .driver_ri {
+	margin: 0 0 0 90px;
+	text-align: left;
+	padding-top: 16px;
+	line-height: 22px;
+	color:#fff;
+}
+.driver_info .driver_ri p[name="driver_name"] {
+	font-size: 15px;
+}
+.round_bot {
+	padding: 0 45px 0 47px;
+}
+.round_bot .title_box {
+	color: #d4d4d4;
+	font-size: 15px;
+	text-align: center;
+	height: 30px;
+	margin-top: 10px;
+	position: relative;
+}
+.round_bot .title_box .bg {
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px solid #656978;
+	top: 11px;
+}
+.round_bot .title_box .bg_1{position: absolute;width: 76px; height:3px; line-height:3px; font-size:1px;left: 55px;background: #282d44; top:10px;}
+.round_bot .title_box .title_name {
+	padding: 0 3px;
+	position: absolute;
+	width: 70px;
+	left: 55px;
+	text-align: center;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	z-index: 99;
+	color:#7e818f;
+}
+.round_bot .star_box {
+	height: 25px;
+	padding: 0 0 10px 0;
+}
+.round_bot .star_box ul li {
+	height: 25px;
+	width: 15px;
+	float: left;
+	background: url(images/ordershare/star.png?version=20140901) left bottom no-repeat;
+	background-size: 29px 58px;
+}
+.round_bot .star_box ul li.li_ri {
+	background-position: -15px bottom;
+	margin-right: 7px
+}
+.round_bot .star_box ul li.li_active {
+	background-position: left top;
+}
+.round_bot .star_box ul li.li_active_ri {
+	background-position: -15px top;
+	margin-right: 7px
+}
+.round_bot .star_box ul li {
+	height: 25px;
+	width: 15px;
+	float: left;
+	background: url(images/ordershare/star.png?version=20140901) left bottom no-repeat;
+	background-size: 29px 58px;
+}
+.round_bot .comment_cont {
+	text-align: left;
+	clear: both;
+	overflow: hidden;
+	padding-left: 10px; color:#fff; height:40px; overflow:hidden;
+}
+.text_box2 {
+	margin: 50px auto 35px auto;
+	background: #ededed;
+	height: 52px;
+	padding-top: 9px;
+}
+.img_box1 {
+	margin: 0 auto;
+}
+.img_box1 img {
+	border-radius: 100%;
+width:278px:
+}
+.mar_box {
+	margin: 40px auto 35px auto
+}
+.logo {
+	margin: 42px auto 0 auto;
+	text-align: center;
+	width: 78px;
+	background: #ededed;
+	height: 90px;
+}
+.foot {
+	margin: 25px auto 0 auto;
+	width: 223px;
+	height: 175px;
+}
+.foot ul {
+	margin: 20px auto 0 auto; width:183px;
+}
+.foot ul li {
+	float: left;
+}
+.foot ul li .k_bg {
+	width: 57px;
+	height: 47px;
+	padding-top: 10px;
+	background: #ff9804;
+	border-radius: 5px;
+	text-align: center;
+}
+.foot ul li .k_bg span {
+	display: inline-block;
+	background-size: 158px 33px;
+	width: 26px;
+	height: 33px;
+	background: url(images/ordershare/icon.png?version=20140901) left top no-repeat;
+	background-size: 158px 33px;
+}
+.foot ul li p {
+	text-align: center;
+	font-size: 15px;
+	padding-top: 4px;
+}
+.foot ul li.android {
+	float: right;
+}
+.foot ul li.android span {
+	background-position: -130px top;
+}
+/*loading**/
+    
+.loading-box {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	background-color: rgba(0,0,0,.2);
+}
+ @-webkit-keyframes loading-car-spin {
+ from {
+-webkit-transform:rotate(0deg);
+}
+ to {
+-webkit-transform:rotate(360deg);
+}
+}
+.loading-car {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+.loading-car .bg {
+/*	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 2px;
+	border-radius: 100%;
+	background-image: -webkit-linear-gradient(#f57a00 60%, #ffba1a);
+	-webkit-animation: loading-car-spin 0.8s infinite linear;
+*/
+}
+.loading-car .bg::after {
+/*
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 100%;
+	content: " ";
+*/
+}
+.loading-car .loading-car-icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -12px;
+	margin-top: -12px;
+	width: 25px;
+	height: 25px;
+	background-size: 25px;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	background-image: url(images/ordershare/loading.gif);	
+
+}
+</style>
 </head>
 <body>
-<script type="text/javascript">
-    function browserRedirect() {
-        var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-            window.location = "http://www.baidu.com/";
-        } else {
-            window.location = "http://www.jquery123.com/";
-        }
-    }
-    browserRedirect();
+<div class="loading-box">
+  <div class="loading-car">
+    <div class="bg"></div>
+    <div class="loading-car-icon"></div>
+  </div>
+</div>
+<div class="share_cont hide">
+  <div class="line"></div>
+  <div class="line line_top1"></div>
+  <div class="line line_top2"></div>
+  <div class="line line_top3"></div>
+  <div class="line line_top4"></div>
+  <div class="content">
+    <div class="trip_box"> <img src="images/ordershare/text.png?version=20140901" width="125"  alt=""/>
+      <p>共<span name="km" class="km"></span>公里&nbsp;车费<span name="price" class="price"></span>元 </p>
+    </div>
+    <div class="round_box">
+      <div class="driver_info">
+        <div class="driver_img"><img src="images/ordershare/blank.png?version=20140901" width="70" height="70"/></div>
+        <div class="driver_ri">
+          <p name="driver_name" class="driver_name"></p>
+          <p name="driver_car" class="driver_car"></p>
+        </div>
+      </div>
+      <div class="round_bot">
+        <div class="title_box">
+          <div class="bg"></div>
+          <div class="bg_1"></div>
+          <div class="title_name">评价司机</div>
+        </div>
+        <div class="star_box">
+          <ul>
+            <li></li>
+            <li class="li_ri"></li>
+            <li></li>
+            <li class="li_ri"></li>
+            <li></li>
+            <li class="li_ri"></li>
+            <li></li>
+            <li class="li_ri"></li>
+            <li></li>
+            <li class="li_ri"></li>
+          </ul>
+        </div>
+        <div class="comment_cont"></div>
+      </div>
+    </div>
+    <div class="text_box2"><img src="images/ordershare/text1.png?version=20141124" width="215"  alt=""/></div>
+    <div class="img_box1"> <img src="images/ordershare/img_01.png?version=20140901" width="278" /> </div>
+    <div class="text_box2 mar_box"><img src="images/ordershare/text2.png?version=20140901" width="218"  alt=""/></div>
+    <div class="img_box1"> <img src="images/ordershare/img_02.png?version=20140901" width="278" /> </div>
+    <div class="text_box2 mar_box"><img src="images/ordershare/text3.png?version=20140901" width="218"  alt=""/></div>
+    <div class="img_box1"> <img src="images/ordershare/img_03.png?version=20140901" width="278" /> </div>
+    <div class="logo"> <img src="images/ordershare/logo.png?version=20140918" width="62"  alt=""/> </div>
+    <div class="foot">
+      <p>请点击下载与手机系统相匹配的app</p>
+      <ul>
+        <li>
+          <a href="https://itunes.apple.com/cn/app/di-di-da-che-da-che-shen-qi/id554499054?mt=8"><div class="k_bg"><span></span></div>
+          <p>iOS</p>
+          </a>
+        </li>
+        <li class="android">
+         <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.sdu.didi.psnger&g_f=992316"> <div class="k_bg"><span></span></div>
+          <p>Android</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+	var Config = {
+		baseUrl : 'http://api.udache.com/gulfstream/api/v1/',
+		//baseUrl : '/gulfstream/api/v1/',
+		pageSize : 2,
+		errmsg : '信息获取失败，请稍后再试'
+	};
+	
+	var Ajax = function(opts) {
+		var helper = {
+			createXhr: function() {
+				var xhr;
+				if (window.XMLHttpRequest) {
+					xhr = new XMLHttpRequest();
+				} else {
+					try {
+						xhr = new ActiveXObject('Microsoft.XMLHTTP');
+					} catch (e) {
+						try {
+							xhr = new ActiveXObject("Msxml2.XMLHTTP");
+						} catch (err) {}
+					}
+				}
+				return xhr;
+			},
+			obj2Body: function(obj) {
+				var res = '';
+				if (obj) {
+					for (var p in obj) {
+						if (obj.hasOwnProperty(p)) {
+							res += '&' + p + '=' + obj[p] + '';
+						} else {
+						}
+					}
+				} else {
+				}
+				return res.replace(/^\&/, "");
+			},
+			abortReq: function(xhr) {
+				if (xhr) {
+					xhr.abort();
+				}
+			}
+		};
+	
+		var xhr = helper.createXhr();
+		var _timeout = null;
+		if (xhr) {
+			xhr.open(opts.method, opts.url, true); //true表示异步
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4) {
+					if (_timeout) {
+						clearTimeout(_timeout);
+					}
+					if (xhr.status === 200) {
+						opts.success(xhr.responseText);
+					} else {
+						opts.error(xhr.responseText);
+					}
+				} else if (xhr.readyState === 3) {
+				} else {
+				}
+			};
+			if (opts.method.toUpperCase() === 'GET') {
+				xhr.send(null);
+			} else if (opts.method.toUpperCase() === 'POST') {
+				var body = opts.data ? helper.obj2Body(opts.data) : "";
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xhr.send(body);
+			} else {
+			}
+	
+			if (opts.timeout) {
+				var _millisecond = opts.timeout.millisecond || 30000,
+					_callback = opts.timeout.callback || function() {};
+				_timeout = setTimeout(function() {
+					helper.abortReq(xhr);
+					_callback();
+				}, _millisecond);
+			}
+	
+		}
+	};
+	
+	var Data = {
+		getData: function(){
+				var $loading = document.querySelector('.loading-box'),
+					shareCont = document.querySelector('.share_cont'),
+					oid = Tool.getParam('oid'),
+					sig = Tool.getParam('sig'),
+					param = '?oid='+ oid +'&sig='+sig;
+					
+				Tool.removeClass($loading,'hide');
+				Ajax({
+					method:'get',
+					url : Config.baseUrl + 'passenger/pShare'+param,
+					success : function(ret){
+						Tool.addClass($loading,' hide');
+						Tool.removeClass(shareCont,'hide');
+						if(!ret){
+							ret = "{}";
+						}
+						ret = eval("("+ret+")")
+		
+						if(ret.errno*1 || ret.data==""){
+							alert(ret.errmsg);
+						   // Render.showErrMsg(ret.errmsg);
+							return;
+						}
+						var km = document.querySelector('.km'),
+							price = document.querySelector('.price'),
+							driver_img = document.querySelector('.driver_img').getElementsByTagName('img')[0],
+							driver_name = document.querySelector('.driver_name'),
+							driver_car = document.querySelector('.driver_car'),
+							star_li = document.querySelector('.star_box').getElementsByTagName('li'),
+							comment_cont = document.querySelector('.comment_cont');
+							
+						var rs = ret.data;
+						km.innerHTML = rs.normal_distance;
+						price.innerHTML = rs.pay_title;
+						rs.avatarUrl ? driver_img.src = rs.avatarUrl : driver_img.src ='images/ordershare/default.png?version=20140901';
+						driver_name.innerHTML = rs.name;
+						driver_car.innerHTML = rs.carType;
+						comment_cont.innerHTML = rs.content;
+			
+						var level = parseFloat(rs.level) * 2;
+						for(var i=0;i<level;i++)
+						{
+							if(i % 2 ==1)
+							{
+								star_li[i].className = 'li_active_ri';
+							}else
+							{
+								star_li[i].className = 'li_active';
+							}
+							
+						}
+					},
+					error : function(ret){
+						Tool.addClass($loading,'hide');
+					}
+				});
+			
+		}
+	};
+	
+	var Event = {
+		
+	};
+	
+	document.addEventListener('DOMContentLoaded',function(){
+		Data.getData();
+	},true);
+	
+	var Tool = {
+		getParam: function(key, def, url) {
+			var url = url || location.search, 
+				svalue = url.match(new RegExp('[\?\&]' + key + '=([^\&]*)(\&?)', 'i')),
+				val = svalue ? svalue[1] : svalue;
+				val = (val === null) ? '' : val;
+				val = decodeURIComponent(val);                                             
+			return val || def || "";
+		},
+		hasClass:function(obj, cls) {  
+			if(!obj)return;
+			return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));  
+		},  
+		  
+		addClass : function(obj, cls) {  
+			if(!obj){return;}
+			if(obj.length){
+				for(var i=0;i<obj.length;i++){
+					if (!Tool.hasClass(obj[i], cls)) obj[i].className += " " + cls;  
+				}
+				return ;
+			}
+			if (!Tool.hasClass(obj, cls)) obj.className += " " + cls;  
+		}, 
+	
+		removeClass : function(obj, cls) {  
+			if(!obj)return;
+			if(obj.length){
+				for(var i=0;i<obj.length;i++){
+					if (Tool.hasClass(obj[i], cls)) {  
+						var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');  
+						obj[i].className = obj[i].className.replace(reg, ' ');  
+					}  
+				}
+				return ;
+			}
+	
+			if (Tool.hasClass(obj, cls)) {  
+				var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');  
+				obj.className = obj.className.replace(reg, ' ');  
+			}  
+		},
+	  
+		toggleClass : function(obj,cls){  
+			if(Tool.hasClass(obj,cls)){  
+				Tool.removeClass(obj, cls);  
+			}else{  
+				Tool.addClass(obj, cls);  
+			}  
+		}
+	};
+})();
 </script>
 </body>
 </html>
