@@ -42,15 +42,310 @@ input {
 html,body {
 	overflow:auto;overflow-x:hidden
 }
+
+body {
+	padding: 0;
+	margin: 0;
+	color: #666;
+	font-family: 'Helvetica';
+	font-size: 14px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background: #ededed;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.clearfix {
+	display: inline-block
+}
+.clearfix {
+	display: block
+}
+.clear {
+	clear: both;
+	height: 0;
+	font: 0/0 Arial;
+	visibility: hidden
+}
+.lf {
+	float: left;
+}
+.ri {
+	float: right;
+}
+.line {
+	height: 1px;
+	border-bottom: 1px solid #dbdbdc;
+	width: 150%;
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-transform-origin: top right;
+	transform-origin: top right;
+}
+.line_top1 {
+	top: 438px; /*right:-30px;*/ 
+}
+.line_top2 {
+	top: 852px;/*right:-34px;*/
+}
+.line_top3 {
+	top: 1273px;/*right:-48px;*/
+}
+.line_top4 {
+	top: 1692px;/*right:-28px;*/
+}
+.content {
+	width: 320px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+.trip_box {
+	width: 180px;
+	height: 60px;
+	background: #ededed;
+	text-align: center;
+	margin: 47px auto 36px auto;
+	padding-top: 10px;
+}
+.round_box {
+	width: 278px;
+	height: 278px;
+	margin: 0 auto;
+	border-radius: 100%;
+	background:url(images/ordershare/bg.png?version=20140901) left top no-repeat;
+	background-size:278px 278px;
+}
+.driver_info {
+	padding: 40px 0 0 58px;
+	height: 75px;
+}
+.driver_info .driver_img {
+	width: 70px;
+	height: 70px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	float: left;
+}
+.driver_info .driver_img img {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+}
+.driver_info .driver_ri {
+	margin: 0 0 0 90px;
+	text-align: left;
+	padding-top: 16px;
+	line-height: 22px;
+	color:#fff;
+}
+.driver_info .driver_ri p[name="driver_name"] {
+	font-size: 15px;
+}
+.round_bot {
+	padding: 0 45px 0 47px;
+}
+.round_bot .title_box {
+	color: #d4d4d4;
+	font-size: 15px;
+	text-align: center;
+	height: 30px;
+	margin-top: 10px;
+	position: relative;
+}
+.round_bot .title_box .bg {
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px solid #656978;
+	top: 11px;
+}
+.round_bot .title_box .bg_1{position: absolute;width: 76px; height:3px; line-height:3px; font-size:1px;left: 55px;background: #282d44; top:10px;}
+.round_bot .title_box .title_name {
+	padding: 0 3px;
+	position: absolute;
+	width: 70px;
+	left: 55px;
+	text-align: center;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	z-index: 99;
+	color:#7e818f;
+}
+.round_bot .star_box {
+	height: 25px;
+	padding: 0 0 10px 0;
+}
+.round_bot .star_box ul li {
+	height: 25px;
+	width: 15px;
+	float: left;
+	background: url(images/ordershare/star.png?version=20140901) left bottom no-repeat;
+	background-size: 29px 58px;
+}
+.round_bot .star_box ul li.li_ri {
+	background-position: -15px bottom;
+	margin-right: 7px
+}
+.round_bot .star_box ul li.li_active {
+	background-position: left top;
+}
+.round_bot .star_box ul li.li_active_ri {
+	background-position: -15px top;
+	margin-right: 7px
+}
+.round_bot .star_box ul li {
+	height: 25px;
+	width: 15px;
+	float: left;
+	background: url(images/ordershare/star.png?version=20140901) left bottom no-repeat;
+	background-size: 29px 58px;
+}
+.round_bot .comment_cont {
+	text-align: left;
+	clear: both;
+	overflow: hidden;
+	padding-left: 10px; color:#fff; height:40px; overflow:hidden;
+}
+.text_box2 {
+	margin: 50px auto 35px auto;
+	background: #ededed;
+	height: 52px;
+	padding-top: 9px;
+}
+.img_box1 {
+	margin: 0 auto;
+}
+.img_box1 img {
+	border-radius: 100%;
+width:278px:
+}
+.mar_box {
+	margin: 40px auto 35px auto
+}
+.logo {
+	margin: 42px auto 0 auto;
+	text-align: center;
+	width: 78px;
+	background: #ededed;
+	height: 90px;
+}
+.foot {
+	margin: 25px auto 0 auto;
+	width: 223px;
+	height: 175px;
+}
+.foot ul {
+	margin: 20px auto 0 auto; width:183px;
+}
+.foot ul li {
+	float: left;
+}
+.foot ul li .k_bg {
+	width: 57px;
+	height: 47px;
+	padding-top: 10px;
+	background: #ff9804;
+	border-radius: 5px;
+	text-align: center;
+}
+.foot ul li .k_bg span {
+	display: inline-block;
+	background-size: 158px 33px;
+	width: 26px;
+	height: 33px;
+	background: url(images/ordershare/icon.png?version=20140901) left top no-repeat;
+	background-size: 158px 33px;
+}
+.foot ul li p {
+	text-align: center;
+	font-size: 15px;
+	padding-top: 4px;
+}
+.foot ul li.android {
+	float: right;
+}
+.foot ul li.android span {
+	background-position: -130px top;
+}
+/*loading**/
+    
+.loading-box {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	background-color: rgba(0,0,0,.2);
+}
+ @-webkit-keyframes loading-car-spin {
+ from {
+-webkit-transform:rotate(0deg);
+}
+ to {
+-webkit-transform:rotate(360deg);
+}
+}
+.loading-car {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+.loading-car .bg {
+/*	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 2px;
+	border-radius: 100%;
+	background-image: -webkit-linear-gradient(#f57a00 60%, #ffba1a);
+	-webkit-animation: loading-car-spin 0.8s infinite linear;
+*/
+}
+.loading-car .bg::after {
+/*
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 100%;
+	content: " ";
+*/
+}
+.loading-car .loading-car-icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -12px;
+	margin-top: -12px;
+	width: 25px;
+	height: 25px;
+	background-size: 25px;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	background-image: url(images/ordershare/loading.gif);	
+
+}
 </style>
 </head>
 <body>
-<div class="loading-box">
-  <div class="loading-car">
-    <div class="bg"></div>
-    <div class="loading-car-icon"></div>
-  </div>
-</div>
+
 <div class="share_cont hide">
   <div class="line"></div>
   <div class="line line_top1"></div>
