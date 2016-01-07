@@ -33,57 +33,273 @@ h1,h2,h3,h4,h5,h6{font-size:100%;}
 h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
 ul,li{list-style:none;}
 em,i{font-style:normal;}
-html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
+html{-webkit-text-size-adjust:none; font-size: 16px;}/*禁用iphone中safari的字号自动调整*/
 img{width: auto; max-width: 100%; height: auto; border: 0; vertical-align: top;}/*设置图片自适应*/
 .video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#333;}/*设置页面字体*/
+body{font:16px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#333;}/*设置页面字体*/
 
-html,body{width:100%; height:100%; background: #fff; position: relative;}
-a,a:visited,a:active{color: #8a8a8a; text-decoration: none;}
+/*页面公用样式*/
+.clearfix{zoom:1;}
+.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
+html,body{width:100%; background: #fff;}
+a,a:visited,a:active{color: #333; text-decoration: none;}
+a.active-color,.active-color{color: #333;}
+.fl{float: left;}
+.fr{float: right;}
+.cursor{cursor: pointer;}
+header,.wrap{width:999px; margin: 0 auto;}
+.a-logo,.phpne_num{background-image: url(images/icons.png); background-repeat: no-repeat;}/*图标拼图*/
+.a-logo,.nav li a:hover,.phpne_num,.banner,.popup_txt dt{color: #00c30c;}/*网页主体色 绿色*/
 
-.wrap{width: 1024px; margin: 0 auto;}
+/*头部样式*/
+header{height: 7.5rem;}
+.a-logo{margin-top: 1.875rem; padding-left: 4.375rem; display: block; background-position: 0 0; font-size: 2.25rem;}
+.nav{margin-top: 2.813rem;}
+.nav li{padding: 0 2.813rem; float: left; font: normal 1.5rem/1 \5B8B\4F53;}
 
-/* 焦点图 */
+/* banner */
+.banner{height: 20.313rem; margin: 10px 0; background: url(images/bd_banner.png) no-repeat center bottom;}
+h1{padding-top: 3.75rem; font-size: 3.5rem; text-align: center;}
+h1 strong{font-size: 5.375rem;}
+
+/*每一屏样式*/
+.mod_con_gray{background-color: #f1f0f0;}
+.mod_con{padding-top: 3.75rem;}
+.mod_txt{padding-top: 5.625rem;}
+.mod_txt h2{margin-bottom: 0.25rem; font-size: 2.5rem;}
+.mod_txt strong{font-size: 1.5rem; color: #666;}
+.mod_txt dl{margin-top: 1.25rem;}
+.mod_txt dt{font-size: 1.75rem; color: #00c30c;}
+.mod_txt dd{font-size: 1.25rem; color: #888; line-height: 2.5rem;}
+
+/* 焦点图轮播 */
 .swiper-container{width: 100%; margin: 0 auto; position: relative; overflow: hidden; z-index: 1;}
 .swiper-wrapper{width: 100%; height: 100%; z-index: 1; position: relative; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-transition-property: -webkit-transform; -moz-transition-property: -moz-transform; -o-transition-property: -o-transform; -ms-transition-property: -ms-transform; transition-property: transform; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;}
 .swiper-slide{width: 100%; height: 100%; position: relative; -webkit-flex-shrink: 0; -ms-flex: 0 0 auto; flex-shrink: 0;}
 /* Pagination Styles */
-.swiper-pagination{width: 100%; text-align: center; position: absolute; bottom: 10px; left: 0; z-index: 10;}
-.swiper-pagination-bullet{width: 8px; height: 8px; margin: 0 5px; display: inline-block; border-radius: 100%; background: #000; cursor: pointer; opacity: 0.2;}
-.swiper-pagination-bullet-active{opacity: 1; background: #007aff;}
+.swiper-pagination{width: 100%; text-align: center; position: absolute; bottom: 20px; left: 0; z-index: 2;}
+.swiper-pagination-bullet{width: 16px; height: 16px; margin: 0 5px; display: inline-block; border-radius: 100%; background: #005a60; cursor: pointer;}
+.swiper-pagination-bullet-active{background: #ffffff;}
 
+.swiper-slide{text-align: center;}
+.focus_bg_01{background-color: #30c063;}
+.focus_bg_02{background-color: #00bdc8;}
+.focus_bg_03{background-color: #f0a129;}
+.focus_bg_04{background-color: #25ce8c;}
 
+/* footer */
+footer{padding: 1.875rem 0 3.125rem; border-top: 1px solid #e0e0e0; background-color: #f1f0f0; color: #9d9d9d; font-size: 1.25rem;}
+.contact dt{margin-top: 0.625rem;}
+.contact dd{line-height: 1.75;}
+.phpne_num{padding: 5px 0 5px 60px; background-position: 0 -600px; font-size: 2.125rem;}
+.qrcode{text-align: center;}
+.qrcode img{width: 6.25rem;}
+.copyright{padding-top: 1.875rem; text-align: center;}
 
 @media screen and (max-width: 768px){
 .wrap{width: auto;}
 }
+/* 弹出窗 */
+.popup{width: 646px; height: 334px; background: url(images/bg_pop.png) no-repeat 0 0; position: fixed; top: 50%; left: 50%; margin: -167px 0 0 -343px; z-index: 3; display: none;}
+.popup_txt{width: 300px; margin: 90px 0 0 300px;}
+.popup_txt dt{margin-bottom: 10px; font-size: 50px; color: #17af21; font-weight: bold;}
+.popup_txt .popup_btn{width: 243px; height: 58px; display: block; background-color: #06a210; border: 1px solid #06970f; border-radius: 30px; color: #fff; font-size: 32px; text-align: center; line-height: 58px; cursor: pointer;}
+.popup_close{width: 30px; height: 25px; position: absolute; top: 15px; right: 18px; cursor: pointer;}
+
+/* 浮标 */
+.float_contact{width: 50px; height: 250px; position: fixed; top: 50%; right: 50px; margin-top: -125px; z-index: 2;}
+.float_contact li{width: 50px; height: 52px; margin: 20px 0; background-image: url(images/bg_pop.png); background-repeat: no-repeat; cursor: pointer;}
+.float_tel{background-position: -700px 0;}
+.float_qq{background-position: -700px -100px;}
+.float_goback{background-position: -700px -200px;}
+
+/* 动画 */
+
 </style>
 </head>
 <body>
-	<section class="wrap">
-		<header class="header">header</header>
-	    <section class="article">
-
-	        <div class="swiper-container">
-	            <div class="swiper-wrapper">
-	                <div class="swiper-slide"><img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/0cd97b8e-f23f-4884-bc87-0ef4cada2cc0_5.jpg" alt=""></div>
-	                <div class="swiper-slide"><img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/f1220384-34d2-4e10-a699-cf8adb1db7fa_5.jpg" alt=""></div>
-	                <div class="swiper-slide"><img src="http://res1.windows.microsoft.com/resbox/en/windows/main/de0421f0-b8f5-47f7-9e7c-9e33f2f42805_4.jpg" alt=""></div>
-	                <div class="swiper-slide"><img src="http://res2.windows.microsoft.com/resbox/en/windows/main/dd97a599-be7e-4283-865f-9e1be318e28e_4.jpg" alt=""></div>
-	            </div>
-	            <div class="swiper-pagination"></div>
-	        </div>
-
-	    </section>
-		<footer>
-			footer
-		</footer>
+	<header>
+		<div class="logo fl"><a href="index.php" target="_self" class="a-logo">公众号助手</a></div>
+		<ul class="nav fr">
+			<li class="active-color">首页</li>
+			<li><a href="service.php" target="_self">手机APP</a></li>
+			<li><a href="http://zfdmkj.com/about_us.php" target="_self">关于我们</a></li>
+		</ul>
+	</header>
+	<!-- 焦点图轮播 -->
+    <section class="focus">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="focus_bg_01"><img src="images/bd_focus01.png" alt=""></div></div>
+                <div class="swiper-slide"><div class="focus_bg_02"><img src="images/bd_focus02.png" alt=""></div></div>
+                <div class="swiper-slide"><div class="focus_bg_03"><img src="images/bd_focus03.jpg" alt=""></div></div>
+                <div class="swiper-slide"><div class="focus_bg_04"><img src="images/bd_focus04.png" alt=""></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+	<!-- banner -->
+	<section class="banner">
+		<div class="wrap">
+			<h1>可能是国内最专业的微信公众号服务商<br>已服务全国<strong>779,848</strong>位用户</h1>
+		</div>
 	</section>
+	<!-- content -->
+	<section class="mod_con mod_con_gray">
+		<div class="wrap clearfix">
+			<div class="mod_txt fl">
+				<h2>帐号注册</h2>
+				<strong>微信营销，从注册公众号开始</strong>
+				<dl>
+					<dt>价值</dt>
+					<dd>
+						<p>信息传递，品牌宣传，产品营销，客户互动</p>
+						<p>实现人文情怀和商业利益最大化</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>选择我们</dt>
+					<dd>
+						<p>极速注册：10分钟注册成功，微营销不用等</p>
+						<p>教程指导：专业公众号操作指南，运营得心应手</p>
+						<p>客服对接：一对一客服对接，一站式营销指导</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="mod_pic fr"><img src="images/bd_pic01.png" alt=""></div>
+		</div>
+	</section>
+	<section class="mod_con">
+		<div class="wrap clearfix">
+			<div class="mod_txt fr">
+				<h2>微信认证</h2>
+				<strong>加V认证，你就是官方</strong>
+				<dl>
+					<dt>价值</dt>
+					<dd>
+						<p>版权：实名加V，名称保护</p>
+						<p>推广：搜索排名靠前，加粉更容易</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>选择我们</dt>
+					<dd>
+						<p>专业认证：上万个成功案例，认证我们更专业</p>
+						<p>后顾无忧：认证不成功，全额退款</p>
+						<p>极速认证：1-3个工作日认证通过</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="mod_pic fl"><img src="images/bd_pic02.png" alt=""></div>
+		</div>
+	</section>
+	<section class="mod_con mod_con_gray">
+		<div class="wrap clearfix">
+			<div class="mod_txt fl">
+				<h2>微商城</h2>
+				<strong>再小的商家，也有自己的商城</strong>
+				<dl>
+					<dt>价值</dt>
+					<dd>
+						<p>微信用户已经6亿，客户就在那里！</p>
+						<p>再小的商家也可以有自己的微商城。</p>
+						<p>微商城，带来全新的流量和销量，前景不可限量。</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>选择我们</dt>
+					<dd>
+						<p>专业：上千个成功案例，全国最大的服务商</p>
+						<p>培训：后期一对一专业培训</p>
+						<p>终身免费：一次付费，终身免费使用</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="mod_pic fr"><img src="images/bd_pic03.jpg" alt=""></div>
+		</div>
+	</section>
+	<section class="mod_con">
+		<div class="wrap clearfix">
+			<div class="mod_txt fr">
+				<h2>公众号WIFI</h2>
+				<strong>各大营业场所的吸粉神器</strong>
+				<dl>
+					<dt>为什么要做？</dt>
+					<dd>
+						<p>上网刚需：老板，WiFi账号密码多少？客户必问</p>
+						<p>一键上网：扫二维码即可上网，免去繁琐上网操作</p>
+						<p>快速吸粉：上网之后自动关注公众号，增粉倍爽</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>选择我们</dt>
+					<dd>
+						<p>专业：上千个次成功案例，专业技术人员支持</p>
+						<p>速度快：1-2个工作日办理，第一时间响应</p>
+						<p>费用：一次付费，永久使用</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="mod_pic fl"><img src="images/bd_pic04.png" alt=""></div>
+		</div>
+	</section>
+	<footer>
+		<div class="wrap">
+			<div class="clearfix">
+				<div class="contact fl">
+					<dl>
+						<dt><em class="phpne_num">400-805-8802</em><span>（周一至周日 9:00-18:00）</span></dt>
+						<dd>
+							<p>广州市珍分夺秒科技有限公司</p>
+							<p>公司地址：广东省广州市寺右一马路18号泰恒大厦</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="qrcode fr">
+					<dl>
+						<dt><img src="images/qr_code.png" alt="公众平台二维码"></dt>
+						<dt>扫描下载手机App</dt>
+					</dl>
+				</div>
+			</div>
+			<p class="copyright">Copyright © 2015 广州市珍分夺秒信息科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备14052434号-1</p>
+		</div>
+	</footer>
+	<div class="popup J_popup">
+		<dl class="popup_txt">
+			<dt>公众号助手</dt>
+			<dd><span class="popup_btn" id="J_qq02">在线QQ咨询</span></dd>
+		</dl>
+		<span class="popup_close J_close"></span>
+	</div>
+	<div class="float_contact J_float_contact">
+		<ul>
+			<li class="float_tel"><span class="anima_tel">400-805-8802</span></li>
+			<li class="float_qq" id="J_qq01"></li>
+			<li class="float_goback J_goback"></li>
+		</ul>
+	</div>
 
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<!--QQ客服接口-->
+<script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
 <!--触摸滑动-->
 <script src="swiper.min.js"></script>
 <script>
+function oPopup(){
+	$('.J_popup').show();
+};
+window.onload = function(){
+	setTimeout('oPopup()',10000);
+};
+//
+$('.J_close').click(function(){
+	$('.J_popup').hide();
+});
+//
+$(".J_goback").click(function(){
+		$(window).scrollTop(0);
+	});
 //触摸滑动
 var swiper = new Swiper('.swiper-container', {
 	pagination: '.swiper-pagination',
@@ -91,6 +307,9 @@ var swiper = new Swiper('.swiper-container', {
 	autoplay: 3000,
 	autoplayDisableOnInteraction: false
 });
+//QQ客服接口
+    BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'J_qq01'});
+	BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008058802,selector:'J_qq02'});
 </script>
 </body>
 </html>
