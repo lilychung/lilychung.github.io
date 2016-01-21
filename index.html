@@ -259,7 +259,10 @@ h1{font-size: 18px;}
     //触摸滑动
     var swiper = new Swiper('.swiper-container', {
         nextButton: '.swiper-button-next',
-        direction: 'vertical'
+        direction: 'vertical',
+       	onSlideChangeEnd:function(swiper_ctx) {
+        	swiper_ctx.container[mySwiper.activeIndex].addClass("cur")
+       	}
     });
     </script>
 </body>
