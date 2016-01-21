@@ -1,49 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html leng="zh-CN">
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>移动端</title>
-<script>
-    	pageType = "mobile"
-    </script>
-    <script>
-	//判断是否移动端
-	var browser={  
-		versions:function(){   
-			   var u = navigator.userAgent, app = navigator.appVersion;   
-			   return {//移动终端浏览器版本信息   
-					trident: u.indexOf('Trident') > -1, //IE内核  
-					presto: u.indexOf('Presto') > -1, //opera内核  
-					webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核  
-					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核  
-					mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端  
-					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  
-					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器  
-					iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器  
-					iPad: u.indexOf('iPad') > -1, //是否iPad    
-					webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部 
-				};  
-			 }(),  
-		 language:(navigator.browserLanguage || navigator.language).toLowerCase()  
-	}
-	
-	if (pageType == "mobile") {
-		// PC
-		if (browser.versions.ipad || !browser.versions.mobile) {
-			//window.location = "http://www.zfdmkj.com"
-			alert('pc');
-		}
-	}
-	else {
-		if (!browser.versions.ipad && browser.versions.mobile) {
-			//window.location = "http://m.zfdmkj.com"
-			alert('m');
-		}
-	}
-	</script>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-title" content="公众号助手 - 微信公众平台手机端"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>公众号助手 - 微信公众平台手机端</title>
+    <meta name="keywords" content="微信公众平台,微信公众号助手,公众号登陆,公众号注册申请,微信认证,微信营销,珍分夺秒科技"/>
+    <meta name="description" content="公众号助手，是微信公众平台的手机端，直接手机管理微信公众账号。实现公众帐号运营者与粉丝之间的实时互动。同时，也可能是国内最专业的微信公众号服务商，基于公众号为客户提供账号注册、开发、运营、推广一体化解决方案。"/>
+   <!--  <link type='text/css'  href="gzhzs.css" media="all" rel="stylesheet" /> -->
+<style>
+/*重置reset css*/
+body,div,p,blockquote,
+ul,ol,dl,li,dt,dd,
+form,fieldset,legend,input,button,textarea,tr,td,th,
+h1,h2,h3,h4,h5,h5,hr
+{margin:0; padding:0;}
+article,nav,section,aside,header,footer,hgroup,figure,figcaption
+{margin:0; padding:0; display:block;}/*HTML5 TAG*/
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
+img{width: auto; max-width: 100%; height: auto; border: 0; vertical-align: top;}/*设置图片自适应*/
+.video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
+body{font:12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#fff;}/*设置页面字体*/
+
+html,body{width:100%; height:100%; background: #70c864 url(http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/comm_bg.png) no-repeat center bottom; position: relative;}
+a,a:visited,a:active{color: #fff; text-decoration: none;}
+
+.contact_qq,.contact_tel,.swiper-button-next{background-image: url(http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/comm_icon.png); background-repeat: no-repeat;}
+
+/* 触屏滑动 */
+.swiper-container {width: 100%; height: 100%; margin: 0 auto; position: relative; overflow: hidden; z-index: 1;}
+.swiper-wrapper {position: relative; z-index: 1;}
+.swiper-slide{text-align: center; position: relative; overflow: hidden;}
+.swiper-container-vertical > .swiper-wrapper {
+-webkit-box-orient: vertical;
+-moz-box-orient: vertical;
+-ms-flex-direction: column;
+-webkit-flex-direction: column;
+flex-direction: column;
+}
+.swiper-wp8-horizontal {-ms-touch-action: pan-y; touch-action: pan-y; }/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-vertical {-ms-touch-action: pan-x; touch-action: pan-x; }/* IE10 Windows Phone 8 Fixes */
+.swiper-button-next{width: 30px; height: 20px; margin-left: -15px; background-position: 0 -100px; cursor: pointer; position: absolute; bottom: 20px; left: 50%; z-index: 99;}
+.swiper-button-disabled {display: none;}
+.swiper-button-next{-webkit-animation:anime 1.2s linear infinite;animation:anime 1.2s linear infinite;}/*箭头动画*/
+@-webkit-keyframes anime{
+  0%{-webkit-transform:translateY(30px);transform:translateY(30px);opacity:1;}
+  100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:0;}
+}
+@keyframes anime{
+  0%{-webkit-transform:translateY(30px);transform:translateY(30px);opacity:1;}
+  100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:0;}
+}
+
+/* 共用 */
+h3{font-size: 24px;}
+.mod_txt{padding: 25px 0;}
+.mod_txt strong{font-size: 16px;}
+.go_yxqq{width:160px; height: 40px; margin: 25px auto 0; display: block; border: 2px solid #fff; border-radius: 5px; font-size: 16px; line-height: 40px; text-align: center; cursor: pointer;}
+/* 第一页 */
+h1{font-size: 18px;}
+.page1_nav{padding: 10px 10px 0 0; text-align: right;}
+.page1_pic01{opacity: 0; -webkit-animation:zoomIn  0.5s linear forwards;animation:zoomIn  0.5s linear forwards;}
+.page1_pic02{position: absolute; left: 0; top: 50px; opacity: 0; -webkit-animation:zoomIn 0.5s 0.3s linear forwards;animation:zoomIn 0.5s 0.3s linear forwards;}
+.page1_text strong{height: 9px; display: block; border-bottom: 1px solid #fff;}
+.page1_text strong span{height: 18px; padding: 0 10px; background-color: #70c864;}
+/* 第二页 */
+.page2_btn .go_yxqq{margin-top: 0;}
+.page2_pic01{opacity: 0; -webkit-animation:zoomIn 0.5s linear forwards;animation:zoomIn 0.5s linear forwards;}
+.page2_pic02,.page2_pic03,.page2_pic04,.page2_pic05,.page2_pic06{width: 80px;}
+.page2_pic02{position: absolute; top: 163px; left: 145px; opacity: 0; -webkit-animation:flyInRight 0.5s linear forwards;animation:flyInRight 0.5s linear forwards;}
+.page2_pic03{position: absolute; top: 202px; left: 100px; opacity: 0; -webkit-animation:flyInLeft 0.5s 0.3s linear forwards;animation:flyInLeft 0.5s 0.3s linear forwards;}
+.page2_pic04{position: absolute; top: 360px; left: 115px; opacity: 0; -webkit-animation:flyInLeft 0.5s 0.3s linear forwards;animation:flyInLeft 0.5s 0.3s linear forwards;}
+.page2_pic05{position: absolute; top: 271px; left: 235px; opacity: 0; -webkit-animation:flyInRight 0.5s linear forwards;animation:flyInRight 0.5s linear forwards;}
+.page2_pic06{position: absolute; top: 272px; left: 122px; opacity: 0; -webkit-animation:zoomIn 0.5s 0.5s linear forwards;animation:zoomIn 0.5s 0.5s linear forwards;}
+/* 第三页 */
+.page3_pic01{opacity: 0; -webkit-animation:bounceInDown 0.5s 0.3s linear forwards;animation:bounceInDown 0.5s 0.3s linear forwards;}
+.page3_pic02{width: 112.5px; position: absolute; top: 190px; left: 180px; opacity: 0; -webkit-animation:flyInRight 0.5s 0.5s linear forwards;animation:flyInRight 0.5s 0.5s linear forwards;}
+.page3_pic03{width: 112.5px; position: absolute; top: 242px; left: 115px; opacity: 0; -webkit-animation:flyInRight 0.8s 0.8s linear forwards;animation:flyInRight 0.8s 0.8s linear forwards;}
+/* 第四页 */
+.page4_pic01{opacity: 0; -webkit-animation:showUp 0.3s linear forwards;animation:showUp 0.3s linear forwards;}
+.page4_pic02{width: 94px; position: absolute; top: 160px; left: 190px; opacity: 0; -webkit-animation:zoomIn 0.8s 0.5s linear forwards;animation:zoomIn 0.8s 0.5s linear forwards;}
+.page4_pic03{width: 94px; position: absolute; top: 260px; left: 150px; opacity: 0; -webkit-animation:zoomIn 0.8s 0.7s linear forwards;animation:zoomIn 0.8s 0.7s linear forwards;}
+.page4_pic04{width: 94px; position: absolute; top: 175px; left: 40px; opacity: 0; -webkit-animation:zoomIn 0.8s 0.9s linear forwards;animation:zoomIn 0.8s 0.9s linear forwards;}
+/* 第五页 */
+.page5_pic01{opacity: 0; -webkit-animation:flipInY 0.5s linear forwards;animation:flipInY 0.5s linear forwards;}
+.page5_pic02{width: 111px; position: absolute; top: 160px; left: 190px; opacity: 0; -webkit-animation:fadeInDown 0.5s 0.5s linear forwards;animation:fadeInDown 0.5s 0.5s linear forwards;}
+.page5_pic03{width: 111px; position: absolute; top: 245px; left: 40px; opacity: 0; -webkit-animation:showUp 0.5s 0.5s linear forwards;animation:showUp 0.5s 0.5s linear forwards;}
+.footer{width: 100%; padding: 15px 0; background-color: #55ab48; color: #2e7324; font-size: 10px; position: absolute; left: 0; bottom: 0;}
+
+/* 浮标-联系方式 */
+.contact{width: 50px; height: 125px; position: fixed; top: 80%; right: 10px; margin-top: -60px; z-index: 99;}
+.contact_qq,.contact_tel{width: 50px; height: 50px; display: block;}
+.contact_qq{background-position: 0 0; margin-bottom: 20px;}
+.contact_tel{background-position: 0 -50px;}
+
+/* 从上往下跌落 */
+@-webkit-keyframes bounceInDown{
+  0%{opacity:0;-webkit-transform:translate3d(0,0px,0);transform:translate3d(0,0px,0)}
+  50%{opacity:1;-webkit-transform:translate3d(0,25px,0);transform:translate3d(0,25px,0)}
+  75%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+  90%{-webkit-transform:translate3d(0,5px,0);transform:translate3d(0,5px,0)}
+  100%{-webkit-transform:none;transform:none;opacity:1;}
+}
+@keyframes bounceInDown{
+  0%{opacity:0;-webkit-transform:translate3d(0,0px,0);transform:translate3d(0,0px,0)}
+  50%{opacity:1;-webkit-transform:translate3d(0,25px,0);transform:translate3d(0,25px,0)}
+  75%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+  90%{-webkit-transform:translate3d(0,5px,0);transform:translate3d(0,5px,0)}
+  100%{-webkit-transform:none;transform:none;opacity:1;}
+}
+/* 从上往下飞入 */
+@-webkit-keyframes fadeInDown{
+  0%{opacity:0;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+@keyframes fadeInDown{
+  0%{opacity:0;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+/* 从下往上飞入 */
+@-webkit-keyframes showUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+@keyframes showUp{
+  0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+/* 缩放 */
+@-webkit-keyframes zoomIn{
+  0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3);}
+  50%,100%{opacity:1;}
+}
+@keyframes zoomIn{
+  0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3);}
+  50%,100%{opacity:1;}
+}
+/* 从左飞出 */
+@-webkit-keyframes flyInLeft{
+  0%{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+@keyframes flyInLeft{
+  0%{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+/* 从右飞出 */
+@-webkit-keyframes flyInRight{
+  0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+@keyframes flyInRight{
+  0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);}
+  100%{opacity:1;-webkit-transform:none;transform:none;}
+}
+
+@-webkit-keyframes flipInY{
+  0%{-webkit-transform:perspective(0px) rotate3d(0,1,0,90deg);transform:perspective(0px) rotate3d(0,1,0,90deg);-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;opacity:0;}
+  100%{-webkit-transform:perspective(0px);transform:perspective(0px);opacity:1;}
+}
+@keyframes flipInY{
+  0%{-webkit-transform:perspective(0px) rotate3d(0,1,0,90deg);transform:perspective(0px) rotate3d(0,1,0,90deg);-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;opacity:0;}
+  100%{-webkit-transform:perspective(0px);transform:perspective(0px);opacity:1;}
+}
+</style>
 </head>
 <body>
-divsfdlfkjweifrewojrfwerfjlwejrf
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				<ul class="page1_nav">
+					<li><a href="">关于我们</a></li>
+				</ul>
+				<div class="mod_pic page1_pic">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_1_01.png" alt="" class="page1_pic01">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_1_02.png" alt="" class="page1_pic02">
+				</div>
+				<div class="page1_text">
+					<h1>可能是国内最专业的微信公众号服务商</h1>
+					<strong><span>为客户提供一站式微信营销解决方案</span></strong>
+				</div>
+				<div class="mod_btn">
+					<span class="go_yxqq" id="J_qq02">立即体验</span>
+				</div>
+            </div>
+            <div class="swiper-slide">
+				<div class="mod_txt page2_text">
+					<h3>账号注册</h3>
+					<strong>微信营销，从注册公众号开始</strong>
+				</div>
+                <div class="mod_pic page2_pic">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_2_01.png" alt="" class="page2_pic01">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_2_02.png" alt="" class="page2_pic02">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_2_03.png" alt="" class="page2_pic03">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_2_04.png" alt="" class="page2_pic04">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_2_05.png" alt="" class="page2_pic05">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_2_06.png" alt="" class="page2_pic06">
+				</div>
+				<div class="mod_btn page2_btn">
+					<span class="go_yxqq" id="J_qq03">立即注册</span>
+				</div>
+            </div>
+            <div class="swiper-slide">
+                <div class="mod_txt page3_text">
+					<h3>微信认证</h3>
+					<strong>加V认证，你就是官方</strong>
+				</div>
+                <div class="mod_pic page3_pic">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_3_01.png" alt="" class="page3_pic01">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_3_02.png" alt="" class="page3_pic02">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_3_03.png" alt="" class="page3_pic03">
+				</div>
+            </div>
+            <div class="swiper-slide">
+                <div class="mod_txt page4_text">
+					<h3>微商城</h3>
+					<strong>再小的商家，也有自己的商城</strong>
+				</div>
+                <div class="mod_pic page4_pic">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_4_01.png" alt="" class="page4_pic01">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_4_02.png" alt="" class="page4_pic02">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_4_03.png" alt="" class="page4_pic03">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_4_04.png" alt="" class="page4_pic04">
+				</div>
+            </div>
+            <div class="swiper-slide">
+                <div class="mod_txt page5_text">
+					<h3>公众号WiFi</h3>
+					<strong>各大营业场所的吸粉神器</strong>
+				</div>
+                <div class="mod_pic page5_pic">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_5_01.png" alt="" class="page5_pic01">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_5_02.png" alt="" class="page5_pic02">
+					<img src="http://htm.zfdmkj.com/template_1/images/m_www/2015/gzhzs/page_5_03.png" alt="" class="page5_pic03">
+				</div>
+				<div class="footer">
+					© 2015 广州市珍分夺秒信息科技有限公司<br>粤ICP备14052434号-1
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="contact">
+    	<span class="contact_qq" id="J_qq01"></span>
+    	<a class="contact_tel" href="tel:4008058802"></a>
+    </div>
+	
+    <!--触摸滑动-->
+    <script src="http://js.zfdmkj.com/template_1/js/www/2015/swiper.min.js"></script>
+    <script>
+    //触摸滑动
+    var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        direction: 'vertical'
+    });
+    </script>
 </body>
 </html>
