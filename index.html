@@ -261,6 +261,8 @@ h1{font-size: 18px;}
         nextButton: '.swiper-button-next',
         direction: 'vertical',
        	onSlideChangeEnd:function(swiper_ctx) {
+       		alert(swiper_ctx.container[swiper_ctx.activeIndex]);
+       		alert(swiper_ctx.activeIndex);
        		swiper_ctx.container[swiper_ctx.activeIndex].style.opacity=0.5;
        	}
     });
