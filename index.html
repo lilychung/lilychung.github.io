@@ -261,7 +261,9 @@ h1{font-size: 18px;}
         nextButton: '.swiper-button-next',
         direction: 'vertical',
        	onSlideChangeEnd:function(swiper_ctx) {
-        	swiper_ctx.container[swiper_ctx.activeIndex].addClass("cur")
+       		var prvClass = ("cur")swiper_ctx.container[swiper_ctx.activeIndex].class
+       		alert(prvClass);
+       		("cur")swiper_ctx.container[swiper_ctx.activeIndex].class = prvClass + " cur";
        	}
     });
     </script>
