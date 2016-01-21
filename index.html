@@ -254,8 +254,30 @@ h1{font-size: 18px;}
     </div>
 	
     <!--触摸滑动-->
+
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="http://js.zfdmkj.com/template_1/js/www/2015/swiper.min.js"></script>
     <script>
+    var images = [],count = 0;
+        
+     $('html,body').find('img').each(function(i) {
+         images[i]=$(this).attr('src');
+     });
+     for (var i = 0; i < images.length; i++) {
+         img = new Image;
+         img.src = images[i];
+         img.onload = function() {
+             count++;
+             console.trace(count);
+             if(count==images.length-1)
+             {
+                // $('.cont section').eq(0).addClass('cur');
+                alert("All images");
+             }
+         }
+     };
+
+
     //触摸滑动
     var swiper = new Swiper('.swiper-container', {
         nextButton: '.swiper-button-next',
