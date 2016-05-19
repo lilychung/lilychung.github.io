@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> -->
-    <meta name="viewport" content="width=640,user-scalable=0">
-    <meta name="apple-mobile-web-app-title" content="招募信息"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-    <meta name="apple-touch-fullscreen" content="yes">
-    <title>招募信息</title>
-<style type="text/css">
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="文章运营"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<title>文章运营</title>
+    <link type="text/css" href="" rel="stylesheet">
+<style>
 @charset "utf-8";
 /*重置reset css*/
 body,div,p,blockquote,
@@ -27,19 +27,82 @@ img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片
 html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
 .video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
 body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
-.clearfix{zoom:1;}
-.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
+.clearfix,.intro-list li{zoom:1;}
+.clearfix:after,.intro-list li:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
 
-html,body{width:100%; height: 100%; background: #fff;}
-.wrap{width: 100%; height: 100%;  margin: 0 auto; position: relative; background: url(http://htm.zfdmkj.com/template_1/images/mobile/zt/msg_entrance.png) no-repeat;}
-.wrap a{width: 545px; height: 90px; display: block; position: absolute; left: 47px; top: 875px; background-color: red}
+/*页面公用样式*/
+html,body{width:100%; height:100%; margin: 0 auto; background: #f2f3f4;}
+a,a:visited,a:active{text-decoration: none;}
+.fl{float: left;}
+.fr{float: right;}
+/* 拼图 */
+.icons{background-image: url(images/icons.png); background-repeat: no-repeat;}
+.icon-01{background-position: 0 0;}
+.icon-02{background-position: 0 -50px;}
+.icon-03{background-position: 0 -100px;}
+.icon-04{background-position: 0 -150px;}
+.icon-05{background-position: 0 -200px;}
+.icon-06{background-position: 0 -250px;}
+.icon-07{background-position: 0 -300px;}
+.icons{width: 35px; height: 35px; margin-top: 3px; display: block; float: left;}
+/* 文字列表 */
+.intro-list,.action-list{background-color: #fff;}
+.intro-list li{padding: 35px 30px; border-bottom: 1px solid #eee;}
+.intro-list .icons{margin-top: 15px;}
+.intro-txt{padding-left: 65px;}
+.intro-txt dt{font-size: 28px;}
+.intro-txt dd{font-size: 20px;}
+/* 操作条 */
+.m-r-30{margin-right: 30px;}
+.action-bar{margin: 35px 0;}
+.action-list{padding: 35px 30px; font-size: 28px;}
+.btn-online{padding: 5px 10px; display: block; border: 1px solid #18b4ed; border-radius: 5px; background-color: #fff; color: #18b4ed; font-size: 24px; cursor: pointer;}
 </style>
-
 </head>
 
 <body>
-    <div class="wrap">
-        <a href="http://zfdmkj.com/?l=msg_entrance" target="_self"></a>
-    </div>
+	<div class="wrap">
+		<p class="intro-des">微信公众号的文章运营是运营工作中最重要的工作。微信服务号每月可群发4次，订阅号可每天发1次文章。良好的文章，能让带来粉丝的暴涨哦！</p>
+		<ul class="intro-list">
+			<li>
+				<span class="icons icon-01"></span>
+				<dl class="intro-txt">
+					<dt>从时间方面做</dt>
+					<dd>——结合节假日、活动来群发相对应的价值文章给你的粉丝。</dd>
+				</dl>
+			</li>
+			<li>
+				<span class="icons icon-02"></span>
+				<dl class="intro-txt">
+					<dt>从内容方面做</dt>
+					<dd>——不管是原创还是转载，要运营好你的内容，不能胡来。</dd>
+				</dl>
+			</li>
+			<li>
+				<span class="icons icon-03"></span>
+				<dl class="intro-txt">
+					<dt>从互动方面做</dt>
+					<dd>——好文章更要多互动，更多内容运营方法，点击下方推荐阅读。</dd>
+				</dl>
+			</li>
+		</ul>
+		<div class="action-bar">
+			<div class="action-btns clearfix">
+				<a href="" class="btn btn_act fl">了解同行</a>
+				<span class="btn btn_sub fr">去发文章</span>
+			</div>
+		</div>
+	</div>
+
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9310ceb3a45f06448c0681caa0ecee7d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </body>
 </html>
