@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
 	<meta name="viewport" content="width=750,user-scalable=no">
-	<meta name="apple-mobile-web-app-title" content="文章运营"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+	<meta name="apple-mobile-web-app-title" content="基础设置"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
 	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
 	<meta name="apple-touch-fullscreen" content="yes">
-	<title>文章运营</title>
+	<title>基础设置</title>
     <link type="text/css" href="" rel="stylesheet">
 <style>
 @charset "utf-8";
@@ -69,39 +69,41 @@ a,a:visited,a:active{text-decoration: none;}
 
 <body>
 	<div class="wrap">
-		<p class="intro-des">微信公众号的文章运营是运营工作中最重要的工作。微信服务号每月可群发4次，订阅号可每天发1次文章。良好的文章，能让带来粉丝的暴涨哦！</p>
 		<ul class="intro-list">
 			<li>
-				<span class="icons icon-01"></span>
+				<span class="icons icon-04"></span>
 				<dl class="intro-txt">
-					<dt>从时间方面做</dt>
-					<dd>——结合节假日、活动来群发相对应的价值文章给你的粉丝。</dd>
+					<dt>公众号名称选择</dt>
+					<dd>——合适的名称，能让用户直接了解公众号能提供的服务，同时容易记住您的公众号</dd>
 				</dl>
 			</li>
 			<li>
-				<span class="icons icon-02"></span>
+				<span class="icons icon-05"></span>
 				<dl class="intro-txt">
-					<dt>从内容方面做</dt>
-					<dd>——不管是原创还是转载，要运营好你的内容，不能胡来。</dd>
+					<dt>公众号介绍编写</dt>
+					<dd>——用电脑登录公众平台重新设置，请根据账号定位来设置，建议20~50个汉字，以账号服务内容为主，力求让用户关注前就知道你是干什么的</dd>
 				</dl>
 			</li>
 			<li>
-				<span class="icons icon-03"></span>
+				<span class="icons icon-06"></span>
 				<dl class="intro-txt">
-					<dt>从互动方面做</dt>
-					<dd>——好文章更要多互动，更多内容运营方法，点击下方推荐阅读。</dd>
+					<dt>自定义菜单设置</dt>
+					<dd>——让粉丝一目了然的了解公众号相关服务</dd>
 				</dl>
 			</li>
 		</ul>
 		<div class="action-bar">
-			<div class="action-btns clearfix">
-				<a href="" class="btn btn_act fl">了解同行</a>
-				<span class="btn btn_sub fr">去发文章</span>
-			</div>
+			<ul class="action-list clearfix">
+				<li class="fl"><span class="icons icon-07 m-r-30"></span>你也可以向专家寻求帮助</li>
+				<li class="fr"><span class="btn-online" id="online-qq"><i class="icons icon-07"></i>咨询专家</span></li>
+			</ul>
 		</div>
 	</div>
 
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
 <script>
+//QQ客服接口
+ BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008061956,selector:'online-qq'});
 //百度统计
 var _hmt = _hmt || [];
 (function() {
