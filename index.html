@@ -1,15 +1,14 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
-	<meta name="viewport" content="width=640,user-scalable=no">
-	<meta name="apple-mobile-web-app-title" content="基础设置"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
-	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
-	<meta name="apple-touch-fullscreen" content="yes">
-	<title>基础设置</title>
-    <link type="text/css" href="" rel="stylesheet">
-<style>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE兼容模式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-title" content="推广平台-首页"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>推广平台-首页</title>
+<style type="text/css">
 @charset "utf-8";
 /*重置reset css*/
 body,div,p,blockquote,
@@ -18,100 +17,196 @@ form,fieldset,legend,input,button,textarea,tr,td,th,
 h1,h2,h3,h4,h5,h5,hr
 {margin:0; padding:0;}
 article,nav,section,aside,header,footer,hgroup,figure,figcaption
-{margin:0; padding:0; display:block;}/*HTML5 TAG*/
+{margin:0; padding:0; display:block;}/* HTML5 TAG */
 h1,h2,h3,h4,h5,h6{font-size:100%;}
 h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
 ul,li{list-style:none;}
 em,i{font-style:normal;}
-img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/*设置图片自适应*/
-html{-webkit-text-size-adjust:none;}/*禁用iphone中safari的字号自动调整*/
-.video embed,.video object,.video iframe{width: 100%; height: auto;}/*设置视频自适应*/
-body{font:24px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; color:#000;}/*设置页面字体*/
-.clearfix,.intro-list li{zoom:1;}
-.clearfix:after,.intro-list li:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
-
-/*页面公用样式*/
-html,body{width:100%; height:100%; margin: 0 auto; background: #f2f3f4;}
-a,a:visited,a:active{text-decoration: none;}
+img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/* 设置图片自适应 */
+.video embed,.video object,.video iframe{width: 100%; height: auto;}/* 设置视频自适应 */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}/* 调整浏览器字体大小 */
+body{-webkit-font-smoothing:antialiased;}/* 设置页面上的字体抗锯齿 */
+input:focus{outline: none;}
+/*设置页面字体、行高、字体大小*/
+body{font:normal 14px/1.5 "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif; color:#000;background-color: #f3f4f6;}
+/* 清浮 */
+.clearfix{zoom:1;}
+.clearfix:after{content:'.'; height:0; display:block; clear:both; visibility:hidden;}
+/* 链接 */
+a{color: #000; text-decoration: none;}
+.link_01{color: #ff6600;}/* 蓝色 */
+.link_01:hover{text-decoration: underline;}
+/* 浮动 */
 .fl{float: left;}
 .fr{float: right;}
-/* 按扭 */
-.btn{width: 280px; height: 80px; display: block; border-radius: 10px; text-align: center; font-size: 32px; line-height: 80px; cursor: pointer;}
-.btn_act{background-color: #4ab5ed; color: #fff; border: 1px solid #4ab5ed;}
-.btn_sub{background-color: #fff; color: #000; border: 1px solid #e0e0e0;}
+/* 光标手势 */
+.cursor{cursor: pointer;}
 /* 拼图 */
-.icons{background-image: url(/template_1/images/mobile/wechat/valuation/icons.png); background-repeat: no-repeat;}
-.icon-01{background-position: 0 0;}
-.icon-02{background-position: 0 -50px;}
-.icon-03{background-position: 0 -100px;}
-.icon-04{background-position: 0 -150px;}
-.icon-05{background-position: 0 -200px;}
-.icon-06{background-position: 0 -250px;}
-.icon-07{background-position: 0 -300px;}
-.icons{width: 35px; height: 35px; margin-top: 3px; display: block; float: left;}
-/* 文字列表 */
-.intro-list,.action-list,.intro-des{background-color: #fff;}
-.intro-list li{padding: 35px 30px; border-bottom: 1px solid #eee;}
-.intro-list .icons{margin-top: 15px;}
-.intro-txt{padding-left: 65px;}
-.intro-txt dt{font-size: 28px;}
-.intro-txt dd{font-size: 20px;}
-/* 操作条 */
-.m-r-30{margin-right: 30px;}
-.action-bar{margin: 35px 0;}
-.action-list{padding: 35px 30px; font-size: 28px;}
-.btn-online{padding: 5px 10px; display: block; border: 1px solid #18b4ed; border-radius: 5px; background-color: #fff; color: #18b4ed; font-size: 24px; cursor: pointer;}
-/* 文章运营 */
-.intro-des{padding: 30px; margin-bottom: 35px; font-size: 28px;}
-.action-btns{padding: 0 60px; }
+.scroll_icon{background-image: url(images/index_icons.png); background-repeat: no-repeat;}
+
+/* 操作条-按扭 */
+.action_bar{width: 100%; padding: 20px 0; background-color: #eee; position: fixed; bottom: 0; left: 0;}
+.btn{width: 80%; height: 40px; margin: 0 auto; display: block; border-radius: 5px; font-size: 18px; line-height: 40px; text-align: center; cursor: pointer;}
+.btn_act{background-color: #00b2f4; color: #fff;}
+/* 标题 */
+.tit_bar{height: 21px; padding: 10px 15px;}
+/* 订单列表 */
+.order_item{padding: 0 15px; margin-bottom: 10px; background-color: #fff;}
+.order_hd{padding: 5px 0;}
+.order_bd{padding: 10px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+.order_fd{padding: 5px 0;}
+.order_acc{width: 70%; height: 24px; font-size: 16px; color: #999; overflow: hidden;}
+.order_time{width: 30%; height: 24px; font-size: 12px; line-height: 24px; color: #ccc; text-align: right; overflow: hidden;}
+.order_tit{width: 80%; height: 50px; font-size: 15px; line-height: 25px; overflow: hidden;}
+.order_pic{width: 20%; text-align: right;}
+.order_pic img{width: 50px; height: 50px;}
+.order_info{width: 80%; height: 21px; font-size: 12px; line-height: 21px; overflow: hidden;}
+.order_price{width: 20%; text-align: right; overflow: hidden;}
+/* 广告条 */
+/* .banner{position: relative;} */
+/* 焦点图轮播 */
+.swiper-container{width: 100%; margin: 0 auto; position: relative; overflow: hidden; z-index: 1;}
+.swiper-wrapper{width: 100%; height: 100%; z-index: 1; position: relative; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-transition-property: -webkit-transform; -moz-transition-property: -moz-transform; -o-transition-property: -o-transform; -ms-transition-property: -ms-transform; transition-property: transform; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;}
+.swiper-slide{width: 100%; height: 100%; text-align: center; position: relative; -webkit-flex-shrink: 0; -ms-flex: 0 0 auto; flex-shrink: 0;}
+.swiper-pagination{width: 100%; text-align: right; position: absolute; bottom: 5px; left: 0; z-index: 2;}
+.swiper-pagination-bullet{width: 8px; height: 8px; margin-right: 5px; display: inline-block; border-radius: 100%; background: #000; opacity: 0.5; cursor: pointer;}
+.swiper-pagination-bullet-active{background: #00b2f4; opacity: 1; cursor: text;}
+/* 文字滚动 */
+.scroll_txt{position: relative; z-index: 2;}
+.scroll_mask{width: 100%; height: 30px; background-color: #fff; opacity: .5; position: absolute; top: 0; left: 0;}
+.scroll_icon{width: 25px; height: 20px; position: absolute; top: 8px; left: 10px;}
+.scroll_container{width: 90%; height:18px; padding: 6px 0; font-size: 12px; line-height: 18px; white-space: nowrap; overflow:hidden; position: absolute; top: 0; left: 35px;}
+.scroll_container a{color: #fff;}
+
+/* 加载更多 */
+.add_more{padding-bottom: 60px;}
+.add_more_auto{width: 200px; display: block; margin: 0 auto;}
+.add_more img{width: 16px; margin: 3px 10px 0 0;}
 </style>
 </head>
 
 <body>
 	<div class="wrap">
-		<ul class="intro-list">
-			<li>
-				<span class="icons icon-04"></span>
-				<dl class="intro-txt">
-					<dt>公众号名称选择</dt>
-					<dd>——合适的名称，能让用户直接了解公众号能提供的服务，同时容易记住您的公众号</dd>
-				</dl>
-			</li>
-			<li>
-				<span class="icons icon-05"></span>
-				<dl class="intro-txt">
-					<dt>公众号介绍编写</dt>
-					<dd>——用电脑登录公众平台重新设置，请根据账号定位来设置，建议20~50个汉字，以账号服务内容为主，力求让用户关注前就知道你是干什么的</dd>
-				</dl>
-			</li>
-			<li>
-				<span class="icons icon-06"></span>
-				<dl class="intro-txt">
-					<dt>自定义菜单设置</dt>
-					<dd>——让粉丝一目了然的了解公众号相关服务</dd>
-				</dl>
-			</li>
-		</ul>
-		<div class="action-bar">
-			<ul class="action-list clearfix">
-				<li class="fl"><span class="icons icon-07 m-r-30"></span>你也可以向专家寻求帮助</li>
-				<li class="fr"><span class="btn-online" id="online-qq"><i class="icons icon-07"></i>咨询专家</span></li>
-			</ul>
+		<div class="banner">
+			<div class="scroll_txt">
+				<div class="scroll_mask"></div>
+				<span class="scroll_icon"></span>
+				<div id="scroll_container" class="scroll_container"> 
+					<span id="scroll_begin">
+						<span><font color="#FF6600">Rabo</font> <font color="#000">发布了一条</font><font color="#FF6600">￥499</font><font color="#000">的订单</font></span><span><font color="#FF6600">家政无忧 </font><font color="#000">完成推广，获得</font><font color="#FF6600">￥499</font><font color="#000">收入</font></span><span><font color="#FF6600">Rabo</font> <font color="#000">发布了一条</font><font color="#FF6600">￥499</font><font color="#000">的订单</font></span><span></span><span><font color="#FF6600">Rabo</font> <font color="#000">发布了一条</font><font color="#FF6600">￥499</font><font color="#000">的订单</font></span><span></span><span><font color="#FF6600">Rabo</font> <font color="#000">发布了一条</font><font color="#FF6600">￥999</font><font color="#000">的订单</font></span><span></span><span><font color="#FF6600">苏南万科商业新发展</font> <font color="#000">发布了一条</font><font color="#FF6600">￥300</font><font color="#000">的订单</font></span><span></span>
+					</span> 
+
+
+					</span> 
+					<span id="scroll_end"></span> 
+				</div>
+			</div>
+			<div class="scroll_pic">
+				<div class="swiper-container">
+		            <div class="swiper-wrapper">
+		                <div class="swiper-slide"><a href="" target="_self"><img src="images/index_banner.png" alt=""></a></div>
+		            	<div class="swiper-slide"><a href="" target="_self"><img src="images/index_banner.png" alt=""></a></div>
+		            </div>
+		            <div class="swiper-pagination"></div>
+		        </div>
+			</div>
 		</div>
+		<div class="tit_bar">最新完成订单</div>
+		<div class="order_item">
+			<a href="" target="_self">
+				<div class="order_hd clearfix">
+					<span class="order_acc fl">天翼港澳通天翼港澳通天翼港澳通</span>
+					<span class="order_time fr">03-08 17:34</span>
+				</div>
+				<div class="order_bd clearfix">
+					<span class="order_tit fl">目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!</span>
+					<span class="order_pic fr"><img src="http://img0.pclady.com.cn/pclady/1605/12/1505203_7.jpg" alt=""></span>
+				</div>
+				<div class="order_fd clearfix">
+					<span class="order_info fl">文章曝光<em class="link_01">32454</em>次，粉丝增加<em class="link_01">1000</em></span>
+					<span class="order_price fr link_01">&yen;359</span>
+				</div>
+			</a>
+		</div>
+		<div class="order_item">
+			<a href="" target="_self">
+				<div class="order_hd clearfix">
+					<span class="order_acc fl">天翼港澳通</span>
+					<span class="order_time fr">03-08 17:34</span>
+				</div>
+				<div class="order_bd clearfix">
+					<span class="order_tit fl">目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!</span>
+					<span class="order_pic fr"><img src="http://img0.pclady.com.cn/pclady/1605/12/1505203_7.jpg" alt=""></span>
+				</div>
+				<div class="order_fd clearfix">
+					<span class="order_info fl">文章曝光文章曝光文章曝光<em class="link_01">35454</em>次，粉丝增加<em class="link_01">1000</em></span>
+					<span class="order_price fr link_01">&yen;359</span>
+				</div>
+			</a>
+		</div>
+		<div class="order_item">
+			<a href="" target="_self">
+				<div class="order_hd clearfix">
+					<span class="order_acc fl">天翼港澳通</span>
+					<span class="order_time fr">03-08 17:34</span>
+				</div>
+				<div class="order_bd clearfix">
+					<span class="order_tit fl">目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!目瞪口呆！新iPhone取消耳机插口!</span>
+					<span class="order_pic fr"><img src="http://img0.pclady.com.cn/pclady/1605/12/1505203_7.jpg" alt=""></span>
+				</div>
+				<div class="order_fd clearfix">
+					<span class="order_info fl">文章曝光<em class="link_01">32454</em>次，粉丝增加<em class="link_01">1000</em></span>
+					<span class="order_price fr link_01">&yen;359</span>
+				</div>
+			</a>
+		</div>
+		<div class="action_bar">
+			<a href="" target="_self" class="btn btn_act">发布订单</a>
+		</div>
+
+		<div class="add_more J_addmore"><span class="add_more_auto"><img src="images/loading.gif" alt="">加载更多</span></div>
 	</div>
 
-<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
-<script>
-//QQ客服接口
- BizQQWPA.addCustom({aty:'0',a:'0',nameAccount:4008061956,selector:'online-qq'});
-//百度统计
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?9310ceb3a45f06448c0681caa0ecee7d";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+<!--jquery-->
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<!--触摸滑动-->
+<script type="text/javascript" src="http://cdn.bootcss.com/Swiper/3.3.1/js/swiper.min.js"></script>
+<script type="text/javascript">
+//触摸滑动
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	autoplay: 3500,
+	autoplayDisableOnInteraction: false
+});
+//文字滚动
+function ScrollImgLeft(){ 
+var speed=50; 
+var scroll_begin = getid("scroll_begin"); 
+var scroll_end = getid("scroll_end"); 
+var scroll_container = getid("scroll_container"); 
+scroll_end.innerHTML=scroll_begin.innerHTML; 
+function Marquee(){ 
+	if(scroll_end.offsetWidth-scroll_container.scrollLeft<=0) 
+		scroll_container.scrollLeft-=scroll_begin.offsetWidth; 
+	else 
+		scroll_container.scrollLeft++; 
+	} 
+var MyMar=setInterval(Marquee,speed); 
+scroll_container.onmouseover=function() {clearInterval(MyMar);} 
+scroll_container.onmouseout=function() {MyMar=setInterval(Marquee,speed);} 
+} 
+function getid(id){
+return document.getElementById(id);
+}
+ScrollImgLeft();
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
