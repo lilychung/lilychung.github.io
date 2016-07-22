@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="ok-squared" unicode="&#xe800;" d="m382 125l343 343q10 10 10 25t-10 25l-57 57q-11 10-25 10t-25-10l-261-261-118 118q-10 11-25 11t-25-11l-57-57q-10-11-10-25t10-25l200-200q11-11 25-11t25 11z m475 493v-536q0-66-47-113t-114-48h-535q-67 0-114 48t-47 113v536q0 66 47 113t114 48h535q67 0 114-48t47-113z" horiz-adv-x="857.1" />
+<glyph glyph-name="record" unicode="&#xe801;" d="m350 700q146 0 248-102t102-248q0-144-102-247t-248-103-248 103-102 247q0 146 102 248t248 102z" horiz-adv-x="700" />
+<glyph glyph-name="stop" unicode="&#xe802;" d="m526 650q74 0 74-64l0-470q0-66-74-66l-450 0q-76 0-76 66l0 470q0 36 18 50t58 14l450 0z" horiz-adv-x="600" />
+<glyph glyph-name="star" unicode="&#xe803;" d="m929 489q0-12-15-27l-203-197 48-279q1-4 1-12 0-11-6-19t-17-9q-10 0-22 7l-251 132-250-132q-13-7-23-7-11 0-17 9t-6 19q0 4 1 12l48 279-203 197q-14 15-14 27 0 21 31 26l280 40 126 254q11 23 27 23t28-23l125-254 280-40q32-5 32-26z" horiz-adv-x="928.6" />
+<glyph glyph-name="heart" unicode="&#xe804;" d="m500-79q-14 0-25 10l-348 336q-5 5-15 15t-31 36-38 55-30 67-13 77q0 123 71 192t196 70q34 0 70-12t67-33 54-38 42-38q20 20 42 38t54 38 67 33 70 12q125 0 196-70t71-192q0-123-128-251l-347-335q-10-10-25-10z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
