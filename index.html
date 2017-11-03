@@ -8,7 +8,72 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">   
 	<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css"> -->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
-	<link rel="stylesheet" href="entrance.css">
+	<!-- <link rel="stylesheet" href="entrance.css"> -->
+	<style>
+	@charset "utf-8";
+/*重置reset css*/
+body,div,p,blockquote,
+ul,ol,dl,li,dt,dd,
+form,fieldset,legend,input,button,textarea,tr,td,th,
+h1,h2,h3,h4,h5,h5,hr
+{margin: 0; padding: 0;}
+article,nav,section,aside,header,footer,hgroup,figure,figcaption
+{margin: 0; padding: 0; display: block;}/* HTML5 TAG */
+h1,h2,h3,h4,h5,h6{font-size: 100%;}
+h1,h2,h3,h4,h5,h6,strong{font-weight: normal;}
+ul,li{list-style: none;}
+em,i{font-style: normal;}
+img{width: auto; max-width: 100%; border: 0; vertical-align: top;}/* 设置图片自适应 */
+.video embed,.video object,.video iframe{width: 100%; height: auto;}/* 设置视频自适应 */
+html{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%}/* 调整浏览器字体大小 */
+body{-webkit-font-smoothing: antialiased;}/* 设置页面上的字体抗锯齿 */
+input:focus{outline: none;}
+/* 清浮 */
+.clearfix{zoom:1;}
+.clearfix:after{content: '.'; height: 0; display: block; clear: both; visibility: hidden;}
+/* 浮动 */
+.fl{float: left;}
+.fr{float: right;}
+/* 光标手势 */
+.cursor{cursor: pointer;}
+/* 显示隐藏 */
+.hide{display: none;}
+.show{display: block;}
+
+
+/*设置页面字体、行高、字体大小*/
+html,body{margin: auto; font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif; color:#333; line-height: 1.5; background-color: #eee;}
+body{font-size: 1rem;}
+/* placeholder */
+::-webkit-input-placeholder{color: #e0e0e0;}
+:-moz-placeholder{color: #e0e0e0; opacity:1;}
+::-moz-placeholder{color: #e0e0e0; opacity:1;}
+:-ms-input-placeholder{color: #e0e0e0;}
+/* 链接 */
+a{color: #000; text-decoration: none;}
+/* 拼图 */
+.icon,.item-sex-act .item-sex-icon{background-image: url(icons.png); background-repeat: no-repeat;}
+
+.btn{border: none; cursor: pointer;}
+/* font-size */
+.font28{font-size: 28px;}
+.font30{font-size: 30px;}
+.font32{font-size: 32px;}
+.font34{font-size: 34px;}
+.font36{font-size: 36px;}
+
+
+.form-tit{padding: 2.1875rem 0 1.5625rem; font-size: 1.125rem; text-align: center;}
+.student-info{width: 20rem; margin: 0 auto 4.6875rem; padding: 2.5rem 1.25rem 3.125rem; background-color: #fff; border-radius: .25rem;}
+.student-info td{padding-bottom: 1.875rem;}
+.item-sex{width: 5.9375rem; height: 2.5rem; border: .09375rem solid #ddd; border-radius: .25rem; background-color: #fff; text-align: center; line-height: 2.5rem; float: left; position: relative; box-sizing: border-box; cursor: pointer;}
+.item-sex:last-child{margin-left: 2.0625rem;}
+.item-sex-act{border: .09375rem solid #c03f3c;}
+.item-sex-icon{width: .8125rem; height: .8125rem; background-position: -1.5625rem -3.125rem; position: absolute; bottom:  -0.40625rem; right: -0.40625rem; background-size: 23.4375rem; z-index: 99;}
+
+.inp-picker{width: 13.9375rem; height: 2.5rem; padding: .75rem; border: 1px solid #ddd; border-radius: .25rem; background-color: #eee; color: #999; line-height: .25rem; font-size: .9375rem; box-sizing: border-box;}
+.btn-next{width: 100%; height: 3.0625rem; font-size: 1.125rem; text-align: center; line-height: 3.0625rem; color: #fff; background-color: #c03f3c; position: fixed; bottom: 0; left: 0;}
+	</style>
 </head>
 <body>
 	<div class="wrap">
