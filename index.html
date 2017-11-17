@@ -64,14 +64,8 @@
 	<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
 	<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
 	<script>
-		window.onload = function() {
-			$('.J-sex li').click(function(){
-				$(this).addClass('item-sex-act');
-				$(this).siblings().removeClass('item-sex-act');
-				var curVal = $(this).attr('data-value');
-				$('#sex').val(curVal);
-			});
-			//jz.entranceInfo.init();
+		$(document).ready(function(){
+			jz.entranceInfo.init();
 			//屏蔽微信分享
 			if (typeof WeixinJSBridge == "undefined") { 
 			    if (document.addEventListener) { 
@@ -86,7 +80,7 @@
 			function onBridgeReady() { 
 			    WeixinJSBridge.call('hideOptionMenu'); 
 			}
-		}
+		})
 	</script>
 </body>
 </html>
