@@ -65,9 +65,13 @@
 	<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
 	<script>
 		window.onload = function() {
-			var male = document.getElementById('male-sex');
-			male.setAttribute('style','color:blue');
-			jz.entranceInfo.init();
+			$('.J-sex li').click(function(){
+				$(this).addClass('item-sex-act');
+				$(this).siblings().removeClass('item-sex-act');
+				var curVal = $(this).attr('data-value');
+				$('#sex').val(curVal);
+			});
+			//jz.entranceInfo.init();
 			//屏蔽微信分享
 			if (typeof WeixinJSBridge == "undefined") { 
 			    if (document.addEventListener) { 
