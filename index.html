@@ -5,16 +5,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">   
-	<link rel="stylesheet" href="https://mp.jianzhiweike.net/css/common/jquery-weui.min.css">
-	<link rel="stylesheet" href="https://mp.jianzhiweike.net/css/mobile/wechat/ltsy/sale/sale.css">
+	<link rel="stylesheet" href="/css/common/jquery-weui.min.css">
+	<link rel="stylesheet" href="/css/mobile/wechat/ltsy/sale/sale.css">
 	<style>
 	.picker-items-col{flex: 1;}
 	.weui-picker-modal .picker-items-col.picker-items-col-divider{display: none;}
 	.weui-picker-modal .picker-item{text-align: center;}
 	</style>
 </head>
-	<script src="https://mp.jianzhiweike.net/js/mobile/wechat/ltsy/sale/jquery.min.js"></script>
-	<script src="https://mp.jianzhiweike.net/js/mobile/wechat/ltsy/sale/comm.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+	<script src="/js/mobile/wechat/ltsy/sale/comm.js"></script>
 	<script>
 			jz.verificaCode(1);
 	</script>
@@ -32,7 +32,7 @@
 								<span class="icon icon-selected"></span>
 							</li>
 							<li class="item-sex" data-value="male">
-								<span id="male-sex">男性</span>
+								<span>男性</span>
 								<span class="icon icon-selected"></span>
 							</li>
 						</ul>
@@ -62,9 +62,15 @@
 	<div class="mask hide" onclick="jz.entranceInfo.pickerMask();"></div>
 
 	<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
-	<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script>
-		$(document).ready(function(){
+		window.onload = function() {
+			$('.J-sex li').click(function(){
+				$(this).addClass('item-sex-act');
+				$(this).siblings().removeClass('item-sex-act');
+				var curVal = $(this).attr('data-value');
+				$('#sex').val(curVal);
+			});
 			jz.entranceInfo.init();
 			//屏蔽微信分享
 			if (typeof WeixinJSBridge == "undefined") { 
@@ -80,7 +86,7 @@
 			function onBridgeReady() { 
 			    WeixinJSBridge.call('hideOptionMenu'); 
 			}
-		})
+		}
 	</script>
 </body>
 </html>
