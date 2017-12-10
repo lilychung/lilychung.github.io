@@ -35,7 +35,7 @@ body{font-size: 1rem; color:#333; line-height: 1.5; background-color: #fff;}
 /* 链接 */
 a{color: #333; text-decoration: none;}
 /* 拼图 */
-.icon{background-image: url(images/icons.png); background-repeat: no-repeat; background-size: 23.4375rem;}
+.icon{background-image: url(../images/icons.png); background-repeat: no-repeat; background-size: 23.4375rem;}
 .i-more{width: 1.5625rem; height: 1.09375rem; background-size: 23.4375rem; position: absolute; bottom: 1.875rem; left: 50%; z-index: 97; margin-left: -0.78125rem; -webkit-animation: anime 1.5s linear infinite; animation: anime 1.5s linear infinite;}
 .i-quotes{width: 0.78125rem; height: 0.625rem; position: absolute;}
 .i-quotes-l{background-position: -9.375rem 0; top: -0.3125rem; left: -0.625rem;}
@@ -151,13 +151,13 @@ hr{width: 2.5rem; height: 0.15625rem; margin: 0 auto; border: 0; background-colo
 .start-btn{width: 7.5rem; height: 1.875rem; margin-left: -3.75rem; color: #666; line-height: 1.875rem; text-align: center; background-color: rgba(255,255,255,.5); border-radius: 0.25rem; position: absolute; bottom: 5.46875rem; left: 50%; z-index: 3;}
 .banner-pic{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;}
 /*.banner-con{width: 100%; min-height: 200px; margin-top: -100px; text-align: center; color: #fff; position: absolute; top: 50%;}*/
-.home-banner{background-image: url(images/index-banner.jpg);}
-.wk-banner{background-image: url(images/wk-banner.jpg);}
-.sy-banner{background-image: url(images/sy-banner.jpg);}
-.media-banner{background-image: url(images/media-banner.jpg);}
-.about-banner{background-image: url(images/about-banner.jpg);}
-.join-banner{background-image: url(images/join-banner.jpg);}
-.know-banner{background-image: url(images/know-banner.jpg);}
+.home-banner{background-image: url(../images/index-banner.jpg);}
+.wk-banner{background-image: url(../images/wk-banner.jpg);}
+.sy-banner{background-image: url(../images/sy-banner.jpg);}
+.media-banner{background-image: url(../images/media-banner.jpg);}
+.about-banner{background-image: url(../images/about-banner.jpg);}
+.join-banner{background-image: url(../images/join-banner.jpg);}
+.know-banner{background-image: url(../images/know-banner.jpg);}
 
 /* 首页 */
 .home-p1 h1{font-size: 2.125rem; color: #fff;}
@@ -165,15 +165,15 @@ hr{width: 2.5rem; height: 0.15625rem; margin: 0 auto; border: 0; background-colo
 .home-top-tit img{width: 50%; margin-bottom: 0.3125rem;}
 .home-p2,.home-p3{background: linear-gradient(#fff,#eee);}
 .home-p2 .i-more,.home-p3 .i-more{background-position: -6.25rem 0;}
-.home-p4{background: url(images/index-pic03.jpg) no-repeat; background-size: 100% 100%;}
+.home-p4{background: url(../images/index-pic03.jpg) no-repeat; background-size: 100% 100%;}
 .home-p4 .mod-tit{margin-top: 18.75rem;}
 .home-p4 .mod-tit dt{margin-bottom: 0; font-size: 2.125rem;}
 .home-p4 .mod-tit-line{background-color: #1e9331;}
 /* 简知微课 */
 .wk .mod-icon{margin: 1.875rem 0.625rem 0;}
-.wk-p3-bg{background-image: url(images/wk-pic06.jpg);}
+.wk-p3-bg{background-image: url(../images/wk-pic06.jpg);}
 .wk-p3 .mod-tit2{width:100%; position: absolute;}
-.wk-p5{background: url(images/wk-bg-rep.png) repeat;}
+.wk-p5{background: url(../images/wk-bg-rep.png) repeat;}
 .wk-p5 .mod-con{margin-top: 3.125rem;}
 .wk-p6{background-color: #fffaf2;}
 .comment-swiper{height: 10.9375rem; margin-top: 4.6875rem;}
