@@ -5,23 +5,14 @@
 	<style type="text/css">
 		*{margin: 0; padding: 0;}
 		input{width: 100%; height: 100%; font-size: 40px;}
-		.wrapper{
-	        position:absolute;
-	        top:30px;
-	        left:0px;
-	        right:0px;
-	        bottom:30px;
-	        overflow:auto;
-	        -webkit-overflow-scrolling : touch;
-	    }
 	</style>
 </head>
 <body>
 	<div style="width: 100%; height: 90px; background-color: blue; position: fixed; bottom: 0; left: 0; z-index: 1;">
 		<input type="text" name="">
 	</div>
-	<div class="wrapper">
-    <p>既然当大于一屏时，IOS下的输入框表现这么差的话，那么当使用输入框时，就得尽量不要让数据大于一屏了</p>
+	<div style="background-color: red; position: absolute; top: 30px; left: 0; right: 0; bottom: 30px; overflow: auto; -webkit-overflow-scrolling : touch;">
+		<p>既然当大于一屏时，IOS下的输入框表现这么差的话，那么当使用输入框时，就得尽量不要让数据大于一屏了</p>
     <p>所以，本页采用固定布局，出去输入框之外的元素，都包含在该元素内部，该元素占据整屏的区域，元素内部滚动</p>
     <p>Android：上输入框表现正常，下输入框：相同的问题，有的表现正常，有的会被键盘盖住(会出现该情况的手机，占据少数，而且跟浏览器相关)</p>
     <p>IOS下：上输入框表现正常</p>
@@ -31,6 +22,6 @@
         控制中间区域的部分
     </p>
     <p>到底了</p>
-</div>
+	</div>
 </body>
 </html>
