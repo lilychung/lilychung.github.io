@@ -1,16 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<title>lilyChung</title>
-	<style type="text/css">
-		*{margin: 0; padding: 0;}
-		input{width: 100%; height: 100%; font-size: 40px;}
-	</style>
+    <meta charset="UTF-8">
+    <title>测试input的focus事件，导致的问题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
+<style>
+    .input-bottom{
+        position:fixed;
+        bottom:0px;
+        left:0px;
+        width:100%;
+        border-top:1px solid #ccc;
+        background-color:#fff;
+        z-index:1;
+    }
 
+    .wrapper{
+        position:absolute;
+        top:30px;
+        left:0px;
+        right:0px;
+        bottom:30px;
+        overflow:auto;
+        -webkit-overflow-scrolling : touch;
+    }
+</style>
 <body>
-	<div style="height: 10000px; background-color: red; position: absolute; top: 30px; left: 0; right: 0; bottom: 30px; overflow: auto; -webkit-overflow-scrolling: touch;"></div>
-	<div style="width: 100%; height: 90px; background-color: blue; position: fixed; bottom: 0; left: 0; z-index: 1;"><input type="text" name=""></div>
-</body>
+<div class="input-bottom">
+    <input class = "input" type = "text" placeholder = "底部输入框" />
+</div>
+<div class="wrapper">
+    <p>既然当大于一屏时，IOS下的输入框表现这么差的话，那么当使用输入框时，就得尽量不要让数据大于一屏了</p>
+    <p>所以，本页采用固定布局，出去输入框之外的元素，都包含在该元素内部，该元素占据整屏的区域，元素内部滚动</p>
+    <p>Android：上输入框表现正常，下输入框：相同的问题，有的表现正常，有的会被键盘盖住(会出现该情况的手机，占据少数，而且跟浏览器相关)</p>
+    <p>IOS下：上输入框表现正常</p>
+    <p>IOS下，下输入框会弹到键盘上面，虽不是紧挨着键盘，但是情况可以接受。</p>
+    <p>所以这种情况下，是可以使用的，最好再把Android下的问题，解决一下，那么该方法，将是固定输入框的最佳解决方案了</p>
+    <p style = "height:1000px;">
+        控制中间区域的部分
+    </p>
+    <p>到底了</p>
+</div>
 </body>
 </html>
