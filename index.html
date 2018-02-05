@@ -4,11 +4,57 @@
 	<title></title>
 </head>
 <body>
-	<input type="button" class="pay-btn-active J-goNext" value="" onclick="gotoNext();">
-	
-	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript">
-		$('.J-goNext').val('前往学习');
-	</script>
+	<div class="wrap">
+        <!-- 详情页 -->
+        <div>
+        	<p>测试测试测试</p>
+            <input type="button" class="pay-btn-active J-goNext" value="" onclick="gotoNext();">
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    	var shopStatus = null,
+    		orderStatus = null;
+        $(document).ready(function(){
+        	//获取订单状态
+            $.get('http://xk-test.jianzhiweike.com/api/order/detail?id=' + id,function(res){
+            	try{
+	            	if(res.code == 0){ //接口请求状态 0-成功，1-失败
+		            	var rusult = res.data;
+	            		shopStatus = rusult.detail.shop_status,
+	            		orderStatus = rusult.order.order_status;
+		            	if(shopStatus == 0){ //销售状态 0-在售 1-停止销售
+		                    if(orderStatus == 2){ //支付状态 0-未购买 1-下单未支付 2-已支付 3-已下架
+		                        $('.J-goNext').val('前往学习');
+		                    }
+		                    else if(orderStatus <= 1){
+		                        $('.J-goNext').val('立即报名');
+		                    }
+		                }
+		                else{
+		                    $('.J-goNext').val('商品已下架');
+		                    $('.J-goNext').removeClass('pay-btn-active').addClass('pay-btn-disable');
+		                }
+		                //设置本地缓存
+		                localStorage.setItem("buyTotal", rusult.detail.buy_total);
+		                localStorage.setItem("shopPrice", rusult.detail.shop_price);
+		                localStorage.setItem("orderStatus", rusult.detail.shop_status);
+	            	}
+	            	else{
+	            		autoTips(res.msg,1500);
+	            	}
+            	}
+            	catch(e){console.log('catch-err====='+e)}
+            });
+        })
+        function gotoNext(){
+        	if(orderStatus == 2){ //已支付-跳转至首页
+        		location.href = 'http://xk-test.jianzhiweike.com/course/#/index';
+        	}
+        	else{ //末支付-跳转至首页支付过渡页
+        		location.href = '../pay/pay' + params;
+        	}
+        }
+    </script>
 </body>
 </html>
