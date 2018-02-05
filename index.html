@@ -17,7 +17,7 @@
     		orderStatus = null;
         $(document).ready(function(){
         	//获取订单状态
-            $.get('http://xk-test.jianzhiweike.com/api/order/detail?id=' + id,function(res){
+            $.get('http://xk-test.jianzhiweike.com/api/order/detail?id=50',function(res){
             	try{
 	            	if(res.code == 0){ //接口请求状态 0-成功，1-失败
 		            	var rusult = res.data;
