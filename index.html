@@ -9,7 +9,7 @@
         <div>
         	<p>测试测试测试</p>
             <input type="text" id="inp" value="" style="width: 200px;">
-            <textarea name="" id="area" cols="5" rows="8" placeholder="请在此写下读后感，参与同学们的讨论！" style="width: 200px; height: 200px;"></textarea>
+            <textarea onkeyup="this.value=this.value.replace(/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g,'')" name="" id="area" cols="5" rows="8" placeholder="请在此写下读后感，参与同学们的讨论！" style="width: 200px; height: 200px;"></textarea>
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
