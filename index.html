@@ -8,8 +8,8 @@
         <!-- 详情页 -->
         <div>
         	<p>测试测试测试</p>
-            <input type="text" id="inp" value="">
-            <textarea name="" id="area" cols="5" rows="8" placeholder="请在此写下读后感，参与同学们的讨论！"></textarea>
+            <input type="text" id="inp" value="" style="width: 200px;">
+            <textarea name="" id="area" cols="5" rows="8" placeholder="请在此写下读后感，参与同学们的讨论！" style="width: 200px; height: 200px;"></textarea>
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
@@ -17,7 +17,7 @@
         var inp = $('#inp').val();
         var area = $('#area').val()
         $('p').on('click',function(){
-            alet('inp=',inp,'+area+',area)
+            alert('inp=',inp,'+area+',area)
         })
     </script>
 </body>
